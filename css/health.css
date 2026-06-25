@@ -1,0 +1,336 @@
+/* 时令养生 · 与全站青绿体系统一 */
+
+.health-page {
+  --health-mint: #b8e8d8;
+  --health-sage: #6aab8a;
+  --health-deep: #2d5a48;
+  --health-card: rgba(255, 255, 255, 0.9);
+  --health-line: rgba(42, 144, 144, 0.14);
+  background: linear-gradient(180deg, #eefafa 0%, #e4f5ef 45%, #dff0ea 100%);
+}
+
+.health-page .film-nav {
+  background: rgba(255, 255, 255, 0.82) !important;
+}
+
+.health-page .scroll-progress-bar {
+  background: linear-gradient(90deg, var(--health-sage), var(--accent-light), var(--accent));
+}
+
+/* Hero */
+.health-hero {
+  position: relative;
+  min-height: 52vh;
+  margin-top: 0;
+  padding-top: 6rem;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.health-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 90%, rgba(106, 171, 138, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(94, 196, 212, 0.25) 0%, transparent 50%),
+    linear-gradient(165deg, #1a4555 0%, #2d6575 35%, #4a9088 70%, #b8e8d8 100%);
+}
+
+.health-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--modern-max, 1140px);
+  margin: 0 auto;
+  padding: 2.5rem var(--modern-gutter, 1.5rem) 3rem;
+}
+
+.health-hero .hero-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.35em;
+  font-size: 0.72rem;
+}
+
+.health-hero .hero-title {
+  font-family: var(--font-title);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  color: #f5fcfc;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.health-hero .hero-desc {
+  color: rgba(238, 250, 250, 0.92);
+  max-width: 28em;
+  line-height: 1.95;
+  margin: 0;
+}
+
+.health-hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.45rem 0.9rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-family: var(--font-sub);
+  font-size: 0.78rem;
+  color: #eefafa;
+  letter-spacing: 0.06em;
+}
+
+.health-hero-chip strong {
+  color: #fff;
+}
+
+/* 今日养生 */
+.health-spotlight {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--health-card);
+  border: 1px solid var(--health-line);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+.health-spotlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--health-sage), var(--accent-light), transparent);
+}
+
+.health-spotlight-label {
+  font-family: var(--font-sub);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.health-spotlight-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--health-deep);
+  letter-spacing: 0.08em;
+  margin: 0 0 0.35rem;
+}
+
+.health-spotlight-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.health-spotlight-tip {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  margin: 0;
+}
+
+.health-spotlight-quote {
+  padding: 1.1rem 1rem;
+  border-left: 2px solid var(--health-sage);
+  background: rgba(184, 232, 216, 0.2);
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--health-deep);
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+/* 四季卡片 */
+.health-section {
+  padding: 3.5rem 0;
+}
+
+.health-section-head {
+  margin-bottom: 1.5rem;
+}
+
+.health-section-head .section-label {
+  margin-bottom: 0.35rem;
+}
+
+.health-season-card.is-current {
+  border-color: var(--season-accent, var(--accent));
+  box-shadow: 0 8px 24px rgba(42, 120, 140, 0.14);
+}
+
+.health-season-card.is-current::after {
+  content: '当前季节';
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  font-family: var(--font-sub);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--season-accent, var(--accent));
+  opacity: 0.85;
+}
+
+.health-season-card {
+  position: relative;
+  height: 100%;
+  padding: 1.25rem 1.1rem 1.1rem;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(238, 250, 250, 0.85));
+  border: 1px solid var(--health-line);
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.health-season-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--season-accent, var(--accent));
+}
+
+.health-season-card:hover {
+  border-color: var(--season-accent, var(--accent-light));
+  box-shadow: 0 10px 28px rgba(42, 120, 140, 0.12);
+  transform: translateY(-3px);
+}
+
+.health-season-card--spring { --season-accent: var(--spring); }
+.health-season-card--summer { --season-accent: var(--summer); }
+.health-season-card--autumn { --season-accent: var(--autumn); }
+.health-season-card--winter { --season-accent: var(--winter); }
+
+.health-season-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.65rem;
+  background: rgba(184, 232, 216, 0.35);
+  border: 1px solid var(--health-line);
+  font-family: var(--font-title);
+  font-size: 1rem;
+  color: var(--season-accent, var(--accent));
+}
+
+.health-season-tag {
+  font-family: var(--font-sub);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: var(--season-accent, var(--accent));
+  margin-bottom: 0.35rem;
+}
+
+.health-season-card h3 {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  color: var(--health-deep);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.65rem;
+}
+
+.health-season-card p {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 0.65rem;
+}
+
+.health-season-card p:last-child {
+  margin-bottom: 0;
+}
+
+.health-season-card strong {
+  color: var(--ocean-deep-text);
+}
+
+/* 养生要诀 */
+.health-tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.health-tip-item {
+  background: var(--health-card);
+  border: 1px solid var(--health-line);
+  overflow: hidden;
+}
+
+.health-tip-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.health-tip-btn:hover {
+  background: rgba(184, 232, 216, 0.15);
+}
+
+.health-tip-btn[aria-expanded="true"] {
+  background: rgba(106, 171, 138, 0.12);
+  border-bottom: 1px solid var(--health-line);
+}
+
+.health-tip-title {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  color: var(--health-deep);
+  letter-spacing: 0.06em;
+}
+
+.health-tip-num {
+  font-family: var(--font-sub);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.health-tip-body {
+  padding: 0 1.15rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.95;
+}
+
+.health-page .film-footer {
+  border-top: 1px solid var(--health-line);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 767.98px) {
+  .health-spotlight {
+    grid-template-columns: 1fr;
+    padding: 1.15rem;
+  }
+
+  .health-hero-content {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .health-season-card:hover {
+    transform: none;
+  }
+}

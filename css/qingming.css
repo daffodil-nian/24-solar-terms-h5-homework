@@ -1,0 +1,73 @@
+/* ============================================
+   清明专题 · 春和景明
+   浅青绿 / 暖白 / 淡金（低饱和国风）
+   ============================================ */
+
+.term-qingming {
+  --qm-sky: rgb(228, 242, 236);
+  --qm-grass: rgb(130, 168, 118);
+  --qm-gold: rgb(200, 178, 110);
+  --qm-ink: rgb(72, 88, 78);
+  --qm-ink-soft: rgb(108, 124, 112);
+  --qm-ivory: rgb(248, 252, 246);
+
+  background:
+    radial-gradient(ellipse at 75% 8%, rgba(255, 248, 228, 0.45) 0%, transparent 48%),
+    linear-gradient(180deg, var(--qm-sky) 0%, var(--qm-ivory) 58%, rgba(210, 228, 204, 0.55) 100%);
+}
+
+.term-qingming .scroll-progress-bar {
+  background: linear-gradient(to right, var(--qm-grass), var(--qm-gold), rgb(160, 190, 150));
+}
+
+.term-qingming .film-nav {
+  background: rgba(248, 252, 246, 0.9) !important;
+  border-bottom: 1px solid rgba(130, 168, 118, 0.28);
+}
+
+.term-qingming .film-nav .navbar-brand {
+  color: var(--qm-grass) !important;
+}
+
+.term-qingming .film-nav .nav-link.active,
+.term-qingming .film-nav .nav-link:hover {
+  color: var(--qm-ink) !important;
+}
+
+.term-qingming .term-sub-nav {
+  background: rgba(248, 252, 246, 0.94);
+  border-bottom: 1px solid rgba(130, 168, 118, 0.24);
+  box-shadow: 0 2px 14px rgba(180, 210, 180, 0.18);
+}
+
+.term-qingming .term-nav-chip {
+  color: var(--qm-ink-soft);
+  border-color: rgba(130, 168, 118, 0.28);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.term-qingming .term-nav-chip:hover {
+  border-color: var(--qm-gold);
+  color: var(--qm-ink);
+}
+
+.term-qingming .term-nav-chip.active {
+  background: linear-gradient(135deg, rgb(118, 158, 108), rgb(148, 178, 132));
+  color: var(--qm-ivory);
+  box-shadow: 0 4px 14px rgba(130, 168, 118, 0.28);
+}
+
+.term-qingming .term-hero {
+  min-height: 52vh;
+}
+
+.term-qingming .term-zone-poetry::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(130, 168, 118, 0.28), transparent);
+  z-index: 2;
+}

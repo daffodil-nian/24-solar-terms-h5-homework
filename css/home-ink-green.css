@@ -1,0 +1,339 @@
+/* ============================================
+   首页 · 墨绿 + 翠绿 + 白色点缀
+   节气主题配色覆盖层
+   ============================================ */
+
+.theme-ink-green {
+  --ink-deep: #1a4a38;
+  --ink-mid: #2a5c47;
+  --ink-soft: #3d6b56;
+  --emerald: #3cb878;
+  --emerald-bright: #4cd69a;
+  --emerald-light: #7de8b8;
+  --emerald-pale: #d4f5e4;
+  --white-soft: #f7fbf9;
+  --white-card: #ffffff;
+  --white-mist: rgba(255, 255, 255, 0.88);
+
+  --ocean-teal: var(--ink-mid);
+  --ocean-cyan: var(--emerald);
+  --ocean-mist: var(--ink-soft);
+  --ocean-light: var(--ink-deep);
+  --ocean-glow: var(--emerald-bright);
+  --glass-bg: var(--white-mist);
+  --glass-border: rgba(60, 184, 120, 0.28);
+  --accent: var(--emerald);
+  --text-primary: var(--ink-deep);
+  --text-secondary: #3d6654;
+  --text-muted: #5a8570;
+  --bg-dark: var(--white-soft);
+  --bg-card: var(--white-card);
+
+  background: linear-gradient(165deg, #f8fcfa 0%, #eef7f2 42%, #e4f2eb 100%);
+  color: var(--text-primary);
+}
+
+.theme-ink-green::after {
+  background:
+    radial-gradient(ellipse 70% 55% at 85% 8%, rgba(76, 214, 154, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 8% 92%, rgba(42, 92, 71, 0.08) 0%, transparent 50%);
+}
+
+.theme-ink-green .scroll-progress-bar {
+  background: linear-gradient(to right, var(--ink-mid), var(--emerald), var(--emerald-bright));
+}
+
+/* 导航 */
+.theme-ink-green .film-nav {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid rgba(60, 184, 120, 0.2) !important;
+  box-shadow: 0 4px 24px rgba(26, 74, 56, 0.06) !important;
+}
+
+.theme-ink-green .film-nav .navbar-brand {
+  color: var(--ink-deep) !important;
+  font-weight: 700;
+}
+
+.theme-ink-green .film-nav .nav-link {
+  color: var(--text-muted) !important;
+}
+
+.theme-ink-green .film-nav .nav-link:hover,
+.theme-ink-green .film-nav .nav-link.active {
+  color: var(--emerald) !important;
+}
+
+.theme-ink-green .film-nav .nav-link::after {
+  background: var(--emerald);
+}
+
+/* 首屏 */
+.theme-ink-green .home-dashboard-bg {
+  background:
+    radial-gradient(ellipse 60% 50% at 90% 12%, rgba(124, 232, 184, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 5% 88%, rgba(42, 92, 71, 0.06) 0%, transparent 50%);
+}
+
+.theme-ink-green .home-dash-tag {
+  color: var(--ink-mid);
+  background: var(--white-card);
+  border: 1px solid rgba(60, 184, 120, 0.35);
+  box-shadow: 0 2px 12px rgba(26, 74, 56, 0.06);
+}
+
+.theme-ink-green .home-dash-title {
+  color: var(--ink-deep);
+  font-weight: 800;
+}
+
+.theme-ink-green .home-dash-desc {
+  color: var(--text-secondary);
+}
+
+.theme-ink-green .home-dash-stat strong {
+  color: var(--emerald);
+}
+
+.theme-ink-green .home-page .btn-ocean-primary {
+  background: linear-gradient(135deg, var(--ink-mid), var(--emerald));
+  box-shadow: 0 8px 28px rgba(60, 184, 120, 0.35);
+}
+
+.theme-ink-green .home-page .btn-ocean-primary:hover {
+  box-shadow: 0 12px 36px rgba(60, 184, 120, 0.45);
+}
+
+.theme-ink-green .home-page .btn-ocean-outline {
+  background: var(--white-card);
+  border-color: rgba(60, 184, 120, 0.45);
+  color: var(--ink-mid);
+}
+
+.theme-ink-green .home-page .btn-ocean-outline:hover {
+  background: var(--emerald-pale);
+  border-color: var(--emerald);
+  color: var(--ink-deep);
+}
+
+/* 轮播 */
+.theme-ink-green .home-hero-carousel {
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 56px rgba(26, 74, 56, 0.14);
+}
+
+.theme-ink-green .home-carousel-visual--spring {
+  background: linear-gradient(145deg, #2a6b52 0%, #3cb878 55%, #5dd39e 100%);
+}
+
+.theme-ink-green .home-carousel-visual--summer {
+  background: linear-gradient(145deg, #1e4d3a 0%, #2a8f5c 50%, #4cd69a 100%);
+}
+
+.theme-ink-green .home-carousel-visual--autumn {
+  background: linear-gradient(145deg, #2d5c48 0%, #3d8f68 50%, #6ee0a8 100%);
+}
+
+.theme-ink-green .home-carousel-visual--winter {
+  background: linear-gradient(145deg, #3d6b56 0%, #5cb88a 45%, #b8f0d4 100%);
+}
+
+.theme-ink-green .home-carousel-img {
+  opacity: 0.95;
+  filter: drop-shadow(0 12px 28px rgba(26, 74, 56, 0.15));
+}
+
+.theme-ink-green .home-carousel-caption {
+  background: linear-gradient(0deg, rgba(26, 74, 56, 0.88) 0%, transparent 100%);
+}
+
+.theme-ink-green .home-carousel-season {
+  color: var(--emerald-light);
+}
+
+/* 快捷卡片 */
+.theme-ink-green .home-quick-section {
+  border-top: 1px solid rgba(60, 184, 120, 0.18);
+}
+
+.theme-ink-green .home-quick-head h2 {
+  color: var(--ink-deep);
+}
+
+.theme-ink-green .home-quick-more {
+  color: var(--emerald);
+}
+
+.theme-ink-green .home-quick-card .motion-card-inner {
+  background: var(--white-card);
+  border: 1px solid rgba(60, 184, 120, 0.12);
+  box-shadow: 0 8px 28px rgba(26, 74, 56, 0.07);
+}
+
+.theme-ink-green .home-quick-card:hover .motion-card-inner {
+  border-color: rgba(60, 184, 120, 0.4);
+  box-shadow: 0 16px 40px rgba(60, 184, 120, 0.18);
+}
+
+.theme-ink-green .home-quick-card .nav-icon {
+  background: var(--emerald-pale);
+  color: var(--ink-mid);
+  border: none;
+}
+
+.theme-ink-green .home-quick-card h3 {
+  color: var(--ink-deep) !important;
+}
+
+/* 智能体 */
+.theme-ink-green .ai-agent-teaser {
+  background: var(--white-card);
+  border: 1px solid rgba(60, 184, 120, 0.25);
+  box-shadow: 0 6px 24px rgba(26, 74, 56, 0.06);
+}
+
+.theme-ink-green .ai-agent-teaser-icon {
+  background: linear-gradient(135deg, var(--ink-mid), var(--emerald));
+}
+
+.theme-ink-green .ai-agent-teaser-title {
+  color: var(--ink-deep);
+}
+
+.theme-ink-green .ai-agent-teaser-badge {
+  background: var(--emerald-pale);
+  color: var(--ink-mid);
+}
+
+.theme-ink-green .ai-agent-teaser-form input {
+  background: var(--white-soft);
+  border-color: rgba(60, 184, 120, 0.3);
+  color: var(--ink-deep);
+}
+
+.theme-ink-green .ai-agent-teaser-form button {
+  background: linear-gradient(135deg, var(--ink-mid), var(--emerald));
+}
+
+.theme-ink-green .ai-agent-fab {
+  background: linear-gradient(135deg, var(--ink-mid), var(--emerald));
+  box-shadow: 0 10px 32px rgba(60, 184, 120, 0.35);
+}
+
+.theme-ink-green .ai-agent-panel {
+  background: var(--white-card);
+  border: 1px solid rgba(60, 184, 120, 0.22);
+}
+
+.theme-ink-green .ai-agent-msg--bot {
+  background: var(--emerald-pale);
+  color: var(--ink-deep);
+}
+
+.theme-ink-green .ai-agent-msg--user {
+  background: linear-gradient(135deg, var(--ink-mid), var(--emerald));
+}
+
+/* 节气导航区 */
+.theme-ink-green .home-section-ocean {
+  background: linear-gradient(180deg, #eef7f2 0%, #f5faf8 100%);
+}
+
+.theme-ink-green .section-label-center {
+  color: var(--emerald);
+}
+
+.theme-ink-green .section-title-center {
+  color: var(--ink-deep);
+}
+
+.theme-ink-green .home-page .season-filter .filter-btn,
+.theme-ink-green .home-page .view-toggle .view-btn {
+  border-color: rgba(60, 184, 120, 0.3);
+  color: var(--text-muted);
+}
+
+.theme-ink-green .home-page .season-filter .filter-btn.active,
+.theme-ink-green .home-page .view-toggle .view-btn.active {
+  background: rgba(60, 184, 120, 0.12);
+  border-color: var(--emerald);
+  color: var(--ink-mid);
+}
+
+.theme-ink-green .home-page .term-card {
+  background: var(--white-card);
+  border: 1px solid rgba(60, 184, 120, 0.15);
+}
+
+.theme-ink-green .home-page .term-card:hover {
+  border-color: var(--emerald);
+  box-shadow: 0 14px 40px rgba(60, 184, 120, 0.15);
+}
+
+.theme-ink-green .home-page .term-card-body h3 {
+  color: var(--ink-deep);
+}
+
+.theme-ink-green .home-page .term-card-body .term-date {
+  color: var(--emerald);
+}
+
+.theme-ink-green .orbit-info-panel {
+  background: var(--white-card);
+  border: 1px solid rgba(60, 184, 120, 0.18);
+}
+
+.theme-ink-green .orbit-info-panel h3 {
+  color: var(--ink-deep);
+}
+
+/* 订阅 & 页脚 */
+.theme-ink-green .home-subscribe-card {
+  background: var(--white-card);
+  border: 1px solid rgba(60, 184, 120, 0.18);
+  box-shadow: 0 12px 40px rgba(26, 74, 56, 0.06);
+}
+
+.theme-ink-green .home-page .film-footer {
+  background: linear-gradient(180deg, #e8f4ee, #dfece6);
+  color: var(--text-muted);
+}
+
+.theme-ink-green .film-footer a:hover {
+  color: var(--emerald);
+}
+
+.theme-ink-green .hero-badge,
+.theme-ink-green .badge {
+  background: var(--emerald-pale) !important;
+  color: var(--ink-mid) !important;
+}
+
+.theme-ink-green .form-control,
+.theme-ink-green .form-select {
+  background: var(--white-soft);
+  border-color: rgba(60, 184, 120, 0.25);
+  color: var(--ink-deep);
+}
+
+.theme-ink-green .btn-film-solid {
+  background: linear-gradient(135deg, var(--ink-mid), var(--emerald));
+  color: #fff;
+}
+
+.theme-ink-green .modal-content {
+  background: var(--white-card);
+  border: 1px solid rgba(60, 184, 120, 0.2);
+  color: var(--ink-deep);
+}
+
+.theme-ink-green .home-stat-card {
+  background: var(--white-card);
+  border-color: rgba(60, 184, 120, 0.18);
+}
+
+.theme-ink-green .home-stat-card .stat-num {
+  background: linear-gradient(135deg, var(--ink-mid), var(--emerald-bright));
+  -webkit-background-clip: text;
+  background-clip: text;
+}

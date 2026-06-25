@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <rect width="400" height="280" fill="#e4f0ec"/>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d0e4dc"/>
+      <stop offset="100%" stop-color="#eef6f2"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" fill="url(#sky)"/>
+  <!-- heavy rain -->
+  <g opacity="0.35" stroke="#8aac98" stroke-width="1">
+    <line x1="20" y1="0" x2="12" y2="40"/><line x1="60" y1="10" x2="52" y2="55"/>
+    <line x1="100" y1="5" x2="92" y2="48"/><line x1="140" y1="15" x2="132" y2="58"/>
+    <line x1="180" y1="0" x2="172" y2="42"/><line x1="220" y1="8" x2="212" y2="50"/>
+    <line x1="260" y1="12" x2="252" y2="52"/><line x1="300" y1="3" x2="292" y2="45"/>
+    <line x1="340" y1="18" x2="332" y2="60"/><line x1="380" y1="6" x2="372" y2="46"/>
+    <line x1="40" y1="60" x2="32" y2="100"/><line x1="160" y1="70" x2="152" y2="110"/>
+    <line x1="280" y1="65" x2="272" y2="105"/>
+  </g>
+  <!-- grain field -->
+  <g fill="#7a9e68" opacity="0.55">
+    <path d="M0 220 Q80 200 160 215 T320 210 T400 220 L400 280 L0 280 Z"/>
+  </g>
+  <g stroke="#6a8e58" stroke-width="1.5" fill="none" opacity="0.7">
+    <path d="M80 220 Q78 190 82 165"/><path d="M120 218 Q118 188 122 160"/>
+    <path d="M200 216 Q198 186 202 158"/><path d="M280 219 Q278 189 282 162"/>
+    <path d="M340 217 Q338 187 342 159"/>
+  </g>
+  <!-- peony -->
+  <circle cx="200" cy="130" r="22" fill="#e8c8d0" opacity="0.75"/>
+  <circle cx="188" cy="122" r="14" fill="#f0d8de" opacity="0.8"/>
+  <circle cx="212" cy="122" r="14" fill="#f0d8de" opacity="0.8"/>
+  <circle cx="200" cy="118" r="10" fill="#d2b450" opacity="0.5"/>
+  <text x="200" y="268" text-anchor="middle" font-family="KaiTi,serif" font-size="14" fill="#4a6848">谷雨 · 雨生百谷</text>
+</svg>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="二十四节气 · 节气小游戏">
+		<title>二十四节气 · 游戏</title>
+		<link href="../lib/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+		<link href="../css/modern.css" rel="stylesheet">
+		<link href="../css/home-snake-game.css" rel="stylesheet">
+		<link href="../css/games.css" rel="stylesheet">
+		<link href="../css/site-bgm.css" rel="stylesheet">
+		<link href="../css/responsive.css" rel="stylesheet">
+	</head>
+	<body class="games-page page-enter">
+		<div id="scrollProgress" class="scroll-progress-bar"></div>
+		<nav class="navbar navbar-expand-lg navbar-light film-nav fixed-top">
+			<div class="container"> <a class="navbar-brand page-link-transition" href="index.html">二十四节气</a> <button
+					class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+					aria-label="切换导航"> <span class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link page-link-transition" href="index.html">首页</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="knowledge.html">节气知识</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="customs.html">民俗美食</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="poetry.html">诗词书画</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="health.html">时令养生</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="calendar.html">节气日历</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="challenge.html">知识挑战</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition"
+								href="culture-library.html">文化联动库</a></li>
+						<li class="nav-item"><a class="nav-link active page-link-transition" href="games.html">游戏</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="heritage.html">四时之约</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header class="games-hero">
+			<div class="container">
+				<p class="games-hero-tag">Games</p>
+				<h1 class="games-hero-title">节气游戏</h1>
+				<p class="games-hero-desc">在轻松互动里熟悉二十四节气顺序。选择下方游戏即可开始。</p>
+			</div>
+		</header>
+		<main class="games-main">
+			<div class="container">
+				<div class="games-list"> <a href="#termSnakeGame" class="games-card is-active page-link-transition">
+						<span class="games-card-icon">蛇</span>
+						<div>
+							<h2>节气贪吃蛇</h2>
+							<p>按立春→大寒顺序吃对应 icon，吃错不前进，走完一轮循环继续</p>
+						</div>
+					</a> </div>
+				<section class="games-play-section home-snake-section" id="termSnakeGame"
+					aria-labelledby="termSnakeTitle">
+					<div class="home-snake-head">
+						<div>
+							<h2 id="termSnakeTitle">节气贪吃蛇</h2>
+							<p>按二十四节气顺序吃掉对应 icon：立春 → 雨水 → … → 大寒，走完一轮再循环。吃错不前进，找对才得分。</p>
+						</div>
+					</div>
+					<div class="row g-3 g-lg-4 align-items-stretch">
+						<div class="col-lg-8">
+							<div class="home-snake-canvas-wrap" id="termSnakeCanvasWrap"> <canvas id="termSnakeCanvas"
+									width="480" height="280" aria-label="节气贪吃蛇游戏区域"></canvas>
+								<div class="home-snake-flash" id="termSnakeFlash" aria-live="polite"></div>
+								<div class="home-snake-overlay" id="termSnakeOverlay">
+									<div class="home-snake-overlay-inner">
+										<h3 id="termSnakeOverlayTitle">节气贪吃蛇</h3>
+										<p id="termSnakeOverlayDesc" class="text-muted mb-3">按顺序吃节气 icon · 键盘方向键或下方按钮操作
+										</p> <button type="button" class="btn btn-film-solid"
+											id="termSnakeStartBtn">开始游戏</button>
+									</div>
+								</div>
+							</div>
+							<div class="home-snake-controls"> <button type="button"
+									class="btn btn-outline-secondary btn-sm" id="termSnakePauseBtn">暂停</button> <button
+									type="button" class="btn btn-outline-secondary btn-sm"
+									id="termSnakeResetBtn">重新开始</button> </div>
+							<div class="home-snake-dpad d-lg-none" aria-label="方向键"> <span
+									class="btn-dpad-empty"></span> <button type="button"
+									class="btn btn-outline-secondary btn-sm" data-dir="up" aria-label="上">↑</button>
+								<span class="btn-dpad-empty"></span> <button type="button"
+									class="btn btn-outline-secondary btn-sm" data-dir="left" aria-label="左">←</button>
+								<span class="btn-dpad-empty"></span> <button type="button"
+									class="btn btn-outline-secondary btn-sm" data-dir="right" aria-label="右">→</button>
+								<span class="btn-dpad-empty"></span> <button type="button"
+									class="btn btn-outline-secondary btn-sm" data-dir="down" aria-label="下">↓</button>
+								<span class="btn-dpad-empty"></span> </div>
+						</div>
+						<div class="col-lg-4">
+							<div class="home-snake-panel">
+								<p class="home-snake-target-label">下一个要吃</p>
+								<div class="home-snake-target"> <img src="" alt="" class="home-snake-target-icon"
+										id="termSnakeTargetIcon"> <span
+										class="home-snake-target-icon home-snake-target-icon--text"
+										id="termSnakeTargetText" style="display:none"></span>
+									<div>
+										<p class="home-snake-target-name" id="termSnakeTargetName">立春</p>
+										<p class="home-snake-target-hint" id="termSnakeTargetHint">第 1 / 24</p>
+									</div>
+								</div>
+								<div class="home-snake-stats">
+									<div class="home-snake-stat"> <strong id="termSnakeScore">0</strong> <span>得分</span>
+									</div>
+									<div class="home-snake-stat"> <strong id="termSnakeRound">1</strong> <span>轮次</span>
+									</div>
+								</div>
+								<div class="home-snake-progress-wrap">
+									<div class="d-flex justify-content-between mb-1"> <small
+											class="text-muted">本轮进度</small> <small class="text-muted"
+											id="termSnakeProgressLabel">0 / 24</small> </div>
+									<div class="progress">
+										<div class="progress-bar" id="termSnakeProgress" role="progressbar"
+											style="width: 0%"></div>
+									</div>
+								</div>
+								<p class="home-snake-tip">场上同时出现多个节气 icon，带光圈的是当前目标。吃错不会增长，找到正确顺序才会前进并循环。</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer class="film-footer">
+			<div class="container">
+				<div class="footer-links mb-3"> <a href="index.html" class="page-link-transition">首页</a> <a
+						href="games.html" class="page-link-transition">游戏</a> </div>
+				<p class="mb-0">二十四节气 · 观象授时</p>
+			</div>
+		</footer>
+		<script src="../lib/jquery.min.js"></script>
+		<script src="../lib/bootstrap.bundle.min.js"></script>
+		<script src="../js/terms-data.js"></script>
+		<script src="../js/term-slugs.js"></script>
+		<script src="../js/home-snake-game.js"></script>
+		<script src="../js/scroll.js"></script>
+		<script src="../js/site-bgm-config.js"></script>
+		<script src="../js/site-bgm.js"></script>
+	</body>
+</html>

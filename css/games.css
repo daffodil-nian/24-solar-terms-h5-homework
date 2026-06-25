@@ -1,0 +1,94 @@
+/* 游戏页 */
+.games-page {
+  background: linear-gradient(180deg, #eefafa 0%, #dff5f5 45%, #d5eff2 100%);
+  background-attachment: fixed;
+}
+
+.games-hero {
+  margin-top: 0;
+  padding: 6rem 0 2rem;
+  text-align: center;
+}
+
+.games-hero-tag {
+  font-family: var(--font-sub);
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.games-hero-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  color: var(--ocean-deep-text);
+  margin-bottom: 0.65rem;
+}
+
+.games-hero-desc {
+  max-width: 36em;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+.games-main {
+  padding-bottom: 3.5rem;
+}
+
+.games-list {
+  margin-bottom: 1.5rem;
+}
+
+.games-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(42, 144, 144, 0.15);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.games-card:hover,
+.games-card.is-active {
+  border-color: var(--accent-light);
+  box-shadow: 0 8px 24px rgba(42, 120, 140, 0.12);
+  color: inherit;
+}
+
+.games-card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #dff5f5, #eefafa);
+  border: 1px solid rgba(42, 144, 144, 0.2);
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.games-card h2 {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  margin: 0 0 0.2rem;
+  letter-spacing: 0.08em;
+}
+
+.games-card p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.games-play-section .home-snake-section {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}

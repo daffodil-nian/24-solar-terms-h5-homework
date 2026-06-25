@@ -1,0 +1,82 @@
+/* 全站背景音乐按钮 · 固定贴在屏幕右侧，滚动页面时不动 */
+
+:root {
+  --site-bgm-top: calc(56px + 0.75rem);
+  --site-bgm-right: 1rem;
+  --site-bgm-size: 44px;
+  --site-bgm-z: 10050;
+}
+
+.site-bgm-btn {
+  position: fixed !important;
+  top: var(--site-bgm-top);
+  right: var(--site-bgm-right);
+  left: auto;
+  bottom: auto;
+  transform: none;
+  z-index: var(--site-bgm-z);
+  width: var(--site-bgm-size);
+  height: var(--site-bgm-size);
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(42, 144, 144, 0.28);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  color: var(--accent, #2a9090);
+  font-family: var(--font-sub, sans-serif);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft, 0 4px 16px rgba(42, 120, 140, 0.12));
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.site-bgm-btn:hover {
+  background: #fff;
+  border-color: var(--accent-light, #5ec4d4);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(42, 120, 140, 0.18);
+}
+
+.site-bgm-btn.is-playing {
+  background: var(--accent, #2a9090);
+  color: #fff;
+  border-color: var(--accent, #2a9090);
+  animation: siteBgmPulse 2s ease-in-out infinite;
+}
+
+.site-bgm-btn.needs-tap {
+  animation: siteBgmHint 1.2s ease-in-out infinite;
+}
+
+.site-bgm-btn.is-error {
+  opacity: 0.45;
+  cursor: not-allowed;
+  animation: none;
+}
+
+@keyframes siteBgmPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(42, 144, 144, 0.35); }
+  50% { box-shadow: 0 0 0 8px rgba(42, 144, 144, 0); }
+}
+
+@keyframes siteBgmHint {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --site-bgm-size: 40px;
+    --site-bgm-right: 0.75rem;
+    --site-bgm-top: calc(52px + 0.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-bgm-btn.is-playing,
+  .site-bgm-btn.needs-tap {
+    animation: none;
+  }
+}

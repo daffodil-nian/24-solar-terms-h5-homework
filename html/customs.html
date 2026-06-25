@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="二十四节气 · 民俗美食 · 舌尖上的中国">
+		<title>二十四节气 · 民俗美食</title>
+		<link href="../lib/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+		<link href="../css/modern.css" rel="stylesheet">
+		<link href="../css/customs.css" rel="stylesheet">
+		<link href="../css/animate.css" rel="stylesheet">
+		<link href="../css/site-bgm.css" rel="stylesheet">
+		<link href="../css/responsive.css" rel="stylesheet">
+	</head>
+	<body class="customs-page page-enter">
+		<div id="scrollProgress" class="scroll-progress-bar"></div>
+		<nav class="navbar navbar-expand-lg navbar-light film-nav fixed-top">
+			<div class="container"> <a class="navbar-brand page-link-transition" href="index.html">二十四节气</a> <button
+					class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"> <span
+						class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link page-link-transition" href="index.html">首页</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="knowledge.html">节气知识</a>
+						</li>
+						<li class="nav-item"><a class="nav-link active page-link-transition"
+								href="customs.html">民俗美食</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="poetry.html">诗词书画</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="health.html">时令养生</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="calendar.html">节气日历</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="challenge.html">知识挑战</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition"
+								href="culture-library.html">文化联动库</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="games.html">游戏</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="heritage.html">四时之约</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section class="customs-hero">
+			<div class="customs-hero-bg"></div>
+			<div class="customs-hero-smoke"></div>
+			<div class="customs-hero-content fade-in-slow">
+				<p class="hero-subtitle subtitle-line">A BITE OF CHINA</p>
+				<h1 class="hero-title subtitle-line">民俗美食</h1>
+				<p class="hero-desc subtitle-line">灶台烟火，时令风物。每一个节气，都藏着中国人与土地相处的味道——不时不食，便是人间至味。</p> <span
+					class="customs-hero-tag subtitle-line">暖黄烟火 · 舌尖中国</span>
+			</div>
+		</section>
+		<section class="customs-section section-compact-top">
+			<div class="container">
+				<p class="section-label-center reveal">FOOD ORACLE</p>
+				<h2 class="section-title-center reveal reveal-delay-1">食签问俗</h2>
+				<p class="text-center reveal reveal-delay-1 mb-4 customs-stick-intro">
+					签筒之中藏廿四节令美味。摇得一签，展卷细读——如翻古籍一般，一页页认识对应节气的美食与食俗。</p>
+				<div class="food-stick-draw reveal reveal-delay-2" id="foodStickDraw">
+					<div class="food-stick-draw-panel">
+						<div class="food-stick-draw-visual">
+							<div class="food-stick-draw-table" aria-hidden="true"></div>
+							<div class="food-stick-tube" id="foodStickTube" aria-hidden="true">
+								<div class="food-stick-tube-body"> <span class="food-stick-tube-label">食</span> </div>
+								<div class="food-stick-bundle"> <span class="food-stick" style="--i:0"></span> <span
+										class="food-stick" style="--i:1"></span> <span class="food-stick"
+										style="--i:2"></span> <span class="food-stick" style="--i:3"></span> <span
+										class="food-stick" style="--i:4"></span> <span class="food-stick"
+										style="--i:5"></span> <span class="food-stick" style="--i:6"></span> </div>
+							</div>
+							<div class="food-stick-picked" id="foodStickPicked" hidden aria-live="polite"></div>
+							<div class="food-ancient-book" id="foodAncientBook" hidden>
+								<div class="food-book-spine" aria-hidden="true"></div>
+								<div class="food-book-pages" id="foodBookPages"></div>
+								<div class="food-book-nav"> <button type="button" class="food-book-flip-btn"
+										id="foodBookPrev" title="上一页">‹ 上一页</button> <span class="food-book-page-num"
+										id="foodBookPageNum">壹 / 叁</span> <button type="button"
+										class="food-book-flip-btn" id="foodBookNext" title="下一页">下一页 ›</button> </div>
+							</div>
+						</div>
+						<div class="food-stick-draw-ui">
+							<p class="food-stick-draw-eyebrow">Fortune Stick</p>
+							<h3 class="food-stick-draw-heading">摇签知味</h3>
+							<p class="food-stick-draw-intro">竹筒签条，古意盎然。闭目摇签，得一处节令风物；再展线装食卷，翻页品读其味其俗。</p> <button
+								type="button" class="food-stick-draw-btn" id="foodStickDrawBtn">摇一摇 · 抽一签</button>
+							<p class="food-stick-draw-status" id="foodStickDrawStatus" aria-live="polite">签筒在侧，待君一抽。</p>
+							<a href="#" class="food-stick-draw-link d-none page-link-transition" id="foodBookLink">进入专题
+								→</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="customs-section">
+			<div class="container">
+				<p class="section-label-center reveal">TERM FOOD ALMANAC</p>
+				<h2 class="section-title-center reveal reveal-delay-1">节气美食专题</h2>
+				<p class="text-center reveal reveal-delay-1 mb-4 tfa-section-intro">
+					一本线装食典，依序翻过廿四页——每页完整介绍该节气代表美食与食俗；如需延伸阅读，可点击页内网上链接。</p>
+				<div class="term-food-almanac reveal reveal-delay-2" id="termFoodAlmanac">
+					<div class="tfa-book-shell">
+						<div class="tfa-book-cover-label" aria-hidden="true"> <span class="tfa-cover-seal">食典</span>
+							<span class="tfa-cover-title">节气美食专题</span> <span class="tfa-cover-sub">廿四节气 · 一页一味</span>
+						</div>
+						<div class="tfa-book" id="tfaBook">
+							<div class="tfa-book-spine" aria-hidden="true"></div>
+							<div class="tfa-book-pages" id="tfaBookPages"></div>
+						</div>
+						<div class="tfa-book-nav"> <button type="button" class="tfa-flip-btn" id="tfaPrev" title="上一页">‹
+								上一页</button>
+							<div class="tfa-page-info"> <span class="tfa-term-name" id="tfaTermName">立春</span> <span
+									class="tfa-page-num" id="tfaPageNum">1 / 24</span> </div> <button type="button"
+								class="tfa-flip-btn" id="tfaNext" title="下一页">下一页 ›</button>
+						</div>
+						<div class="tfa-season-jump" id="tfaSeasonJump" role="tablist" aria-label="按季跳转"> <button
+								type="button" class="tfa-season-btn tfa-season-btn--spring"
+								data-season="spring">春</button> <button type="button"
+								class="tfa-season-btn tfa-season-btn--summer" data-season="summer">夏</button> <button
+								type="button" class="tfa-season-btn tfa-season-btn--autumn"
+								data-season="autumn">秋</button> <button type="button"
+								class="tfa-season-btn tfa-season-btn--winter" data-season="winter">冬</button> </div> <a
+							href="https://baike.baidu.com/item/%E6%98%A5%E9%A5%BC" class="tfa-term-link tfa-web-link"
+							id="tfaTermLink" target="_blank" rel="noopener noreferrer">百度百科 · 春饼 ↗</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="customs-section section-compact-top">
+			<div class="container">
+				<p class="section-label-center reveal">SEASONS</p>
+				<h2 class="section-title-center reveal reveal-delay-1">四季食俗</h2>
+				<div class="accordion film-accordion reveal reveal-delay-2" id="foodAccordion">
+					<div class="accordion-item season-spring">
+						<h2 class="accordion-header"> <button class="accordion-button" type="button"
+								data-bs-toggle="collapse" data-bs-target="#foodSpring">春季 · 尝鲜</button> </h2>
+						<div id="foodSpring" class="accordion-collapse collapse show" data-bs-parent="#foodAccordion">
+							<div class="accordion-body">
+								<div class="row g-3">
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🥬</span>
+											<h4>立春 · 春饼卷菜薹</h4>
+											<p>「咬春」习俗：菜薹是江汉迎春时蔬，脆嫩清甜，与春饼同卷，寓意纳福迎春。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🥟</span>
+											<h4>雨水 · 荠菜馄饨</h4>
+											<p>北方挖荠菜、包馄饨，一口野味便是雨水时节的湿润与鲜灵。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🎋</span>
+											<h4>惊蛰 · 油焖春笋</h4>
+											<p>春雷后春笋破土，至嫩至鲜，江南人家迎接春雷的第一口清欢。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🍳</span>
+											<h4>春分 · 香椿炒蛋</h4>
+											<p>「食春」习俗：香椿、玉兰花是春分风物，把仲春的花与芽端上餐桌。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item season-summer">
+						<h2 class="accordion-header"> <button class="accordion-button collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#foodSummer">夏季 · 清补</button> </h2>
+						<div id="foodSummer" class="accordion-collapse collapse" data-bs-parent="#foodAccordion">
+							<div class="accordion-body">
+								<div class="row g-3">
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🍜</span>
+											<h4>夏至 · 面条</h4>
+											<p>「冬至饺子夏至面」，新麦登场，吃面庆祝丰收。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🥒</span>
+											<h4>小暑 · 藕与黄鳝</h4>
+											<p>「小暑黄鳝赛人参」，民间认为此时黄鳝最为肥美滋补。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🍉</span>
+											<h4>大暑 · 仙草与瓜果</h4>
+											<p>闽南喝仙草冻、广东煲凉茶，以清热解暑，应对三伏酷热。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🫘</span>
+											<h4>立夏 · 立夏蛋</h4>
+											<p>江南儿童「斗蛋」游戏，吃煮鸡蛋，寓意健康平安过夏。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item season-autumn">
+						<h2 class="accordion-header"> <button class="accordion-button collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#foodAutumn">秋季 · 丰收</button> </h2>
+						<div id="foodAutumn" class="accordion-collapse collapse" data-bs-parent="#foodAccordion">
+							<div class="accordion-body">
+								<div class="row g-3">
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🦀</span>
+											<h4>秋分 · 蟹肥</h4>
+											<p>「秋风起，蟹脚痒」，秋分前后螃蟹黄满膏肥，是江南秋日至味。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🌰</span>
+											<h4>白露 · 龙眼</h4>
+											<p>福州「白露必吃龙眼」，据说可补气血，寓意眼睛明亮。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🍐</span>
+											<h4>寒露 · 柿子</h4>
+											<p>「寒露柿红皮，摘下备好冬」，应季柿子润肺止咳。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🥮</span>
+											<h4>中秋 · 月饼</h4>
+											<p>常与秋分相近，月饼象征团圆，与节令赏月的习俗相融。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item season-winter">
+						<h2 class="accordion-header"> <button class="accordion-button collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#foodWinter">冬季 · 温补</button> </h2>
+						<div id="foodWinter" class="accordion-collapse collapse" data-bs-parent="#foodAccordion">
+							<div class="accordion-body">
+								<div class="row g-3">
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🥟</span>
+											<h4>冬至 · 饺子/汤圆</h4>
+											<p>北方「冬至饺子」，南方「冬至汤圆」，「冬至大如年」，阖家团圆。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🍲</span>
+											<h4>立冬 · 进补</h4>
+											<p>「立冬补冬，补嘴空」，南方煲鸡汤、北方吃涮羊肉，储备过冬能量。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🍠</span>
+											<h4>大雪 · 红薯粥</h4>
+											<p>「红薯粥，甜掉牙」，大雪时节以红薯、小米熬粥，暖胃驱寒。</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content-card"><span class="food-icon">🥣</span>
+											<h4>小寒 · 腊八粥</h4>
+											<p>腊八前后熬腊八粥，以多种谷物豆果合煮，寓意五谷丰登、祈福纳祥。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="film-footer">
+			<div class="container">
+				<div class="footer-links mb-3"> <a href="index.html" class="page-link-transition">首页</a> <a
+						href="poetry.html" class="page-link-transition">诗词书画</a> <a href="terms/lichun.html"
+						class="page-link-transition">立春专题</a> <a href="terms/yushui.html"
+						class="page-link-transition">雨水专题</a> </div>
+				<p class="mb-0">二十四节气 · 观象授时</p>
+			</div>
+		</footer>
+		<script src="../lib/jquery.min.js"></script>
+		<script src="../lib/bootstrap.bundle.min.js"></script>
+		<script src="../js/terms-data.js"></script>
+		<script src="../js/term-slugs.js"></script>
+		<script src="../js/term-images.js"></script>
+		<script src="../js/term-food-data.js"></script>
+		<script src="../js/term-pages-data.js"></script>
+		<script src="../js/site-common.js"></script>
+		<script src="../js/scroll.js"></script>
+		<script src="../js/customs-food-draw.js"></script>
+		<script src="../js/customs-term-food-almanac.js"></script> <audio id="siteBgm" preload="auto"></audio> <button
+			type="button" id="siteBgmToggle" class="site-bgm-btn" aria-label="背景音乐">♫</button>
+		<script src="../js/site-bgm-config.js"></script>
+		<script src="../js/site-bgm.js"></script>
+	</body>
+</html>

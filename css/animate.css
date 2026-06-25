@@ -1,0 +1,366 @@
+/* ============================================
+   二十四节气 · 自定义 CSS3 节气动画
+   ============================================ */
+
+/* ---- 电影淡入淡出 ---- */
+.fade-in {
+  animation: fadeIn 1.4s ease forwards;
+}
+
+.fade-in-slow {
+  animation: fadeIn 2s ease forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- 慢推镜头 ---- */
+.slow-zoom-in {
+  animation: slowZoomIn 1.8s ease forwards;
+}
+
+.slow-zoom-out {
+  animation: slowZoomOut 1.8s ease forwards;
+}
+
+@keyframes slowZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(1.12);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes slowZoomOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+    filter: blur(4px);
+  }
+}
+
+/* ---- 暗角渐变转场 ---- */
+.vignette-transition {
+  animation: vignetteReveal 1.6s ease forwards;
+}
+
+@keyframes vignetteReveal {
+  0% {
+    opacity: 0;
+    box-shadow: inset 0 0 200px rgba(137, 212, 224, 0.6);
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: inset 0 0 100px rgba(137, 212, 224, 0.35);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: inset 0 0 0 rgba(137, 212, 224, 0);
+  }
+}
+
+/* ---- 呼吸光影 ---- */
+.breathe-light {
+  animation: breatheLight 5s ease-in-out infinite alternate;
+}
+
+@keyframes breatheLight {
+  0% {
+    box-shadow: 0 0 30px rgba(94, 196, 212, 0.08);
+  }
+  100% {
+    box-shadow: 0 0 60px rgba(94, 196, 212, 0.22);
+  }
+}
+
+/* ---- 字幕逐行显现 ---- */
+.subtitle-line {
+  opacity: 0;
+  animation: subtitleAppear 0.8s ease forwards;
+}
+
+.subtitle-line:nth-child(1) { animation-delay: 0.3s; }
+.subtitle-line:nth-child(2) { animation-delay: 0.7s; }
+.subtitle-line:nth-child(3) { animation-delay: 1.1s; }
+.subtitle-line:nth-child(4) { animation-delay: 1.5s; }
+.subtitle-line:nth-child(5) { animation-delay: 1.9s; }
+
+@keyframes subtitleAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+    letter-spacing: 0.3em;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 0.04em;
+  }
+}
+
+/* ---- 节气卡片交错入场 ---- */
+.stagger-in {
+  opacity: 0;
+  animation: staggerFadeIn 0.9s ease forwards;
+}
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ---- 春：花瓣飘落 ---- */
+.petal-fall {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(184, 201, 191, 0.4);
+  border-radius: 50% 0 50% 50%;
+  animation: petalFall linear infinite;
+  pointer-events: none;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.3; }
+  100% {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* ---- 夏：光斑浮动 ---- */
+.light-spot {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196, 212, 184, 0.15) 0%, transparent 70%);
+  animation: lightFloat ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes lightFloat {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+  100% { transform: translate(20px, -15px) scale(1.1); opacity: 0.6; }
+}
+
+/* ---- 秋：落叶飘动 ---- */
+.leaf-fall {
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  background: rgba(201, 181, 160, 0.35);
+  border-radius: 0 80% 0 80%;
+  animation: leafFall linear infinite;
+  pointer-events: none;
+}
+
+@keyframes leafFall {
+  0% {
+    transform: translateY(-5vh) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  10% { opacity: 0.5; }
+  50% { transform: translateY(50vh) rotate(180deg) translateX(30px); }
+  100% {
+    transform: translateY(105vh) rotate(360deg) translateX(-20px);
+    opacity: 0;
+  }
+}
+
+/* ---- 冬：雪花飘落 ---- */
+.snowflake {
+  position: absolute;
+  color: rgba(197, 200, 203, 0.5);
+  font-size: 0.7rem;
+  animation: snowFall linear infinite;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes snowFall {
+  0% {
+    transform: translateY(-5vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.7; }
+  100% {
+    transform: translateY(105vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ---- 页面链接转场遮罩 ---- */
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: #dff5f5;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.page-transition-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ---- 打字机效果 ---- */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--accent, #c4a882);
+  animation: typing 3s steps(20) forwards, blink 0.8s step-end infinite;
+  max-width: fit-content;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* ---- 脉冲光晕 ---- */
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(196, 168, 130, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(196, 168, 130, 0.5);
+  }
+}
+
+/* ---- 横向滑入 ---- */
+.slide-in-left {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 1s ease forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---- 旋转入场 ---- */
+.rotate-in {
+  animation: rotateIn 1.2s ease forwards;
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-5deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+/* ---- 波纹扩散 ---- */
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(196, 168, 130, 0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.ripple-effect:active::after {
+  opacity: 1;
+}
+
+/* ---- 加载动画 ---- */
+.film-loader {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.film-loader::after {
+  content: '';
+  position: absolute;
+  left: -40%;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background: var(--accent, #c4a882);
+  animation: loaderSlide 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderSlide {
+  0% { left: -40%; }
+  100% { left: 100%; }
+}

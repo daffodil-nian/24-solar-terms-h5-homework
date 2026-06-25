@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="二十四节气 · 时令养生">
+		<title>二十四节气 · 时令养生</title>
+		<link href="../lib/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+		<link href="../css/modern.css" rel="stylesheet">
+		<link href="../css/health.css" rel="stylesheet">
+		<link href="../css/animate.css" rel="stylesheet">
+		<link href="../css/site-bgm.css" rel="stylesheet">
+		<link href="../css/responsive.css" rel="stylesheet">
+	</head>
+	<body class="health-page page-enter">
+		<div id="scrollProgress" class="scroll-progress-bar"></div>
+		<nav class="navbar navbar-expand-lg navbar-light film-nav fixed-top">
+			<div class="container"> <a class="navbar-brand page-link-transition" href="index.html">二十四节气</a> <button
+					class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"> <span
+						class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link page-link-transition" href="index.html">首页</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="knowledge.html">节气知识</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="customs.html">民俗美食</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="poetry.html">诗词书画</a></li>
+						<li class="nav-item"><a class="nav-link active page-link-transition" href="health.html">时令养生</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="calendar.html">节气日历</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="challenge.html">知识挑战</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition"
+								href="culture-library.html">文化联动库</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="games.html">游戏</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="heritage.html">四时之约</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section class="health-hero">
+			<div class="health-hero-bg"></div>
+			<div class="health-hero-content fade-in-slow">
+				<p class="hero-subtitle">WELLNESS</p>
+				<h1 class="hero-title">时令养生</h1>
+				<p class="hero-desc">春生夏长，秋收冬藏。顺应节气调养，是为「治未病」的生活智慧。</p>
+				<div class="health-hero-chip" id="healthHeroChip">载入当前节气…</div>
+			</div>
+		</section>
+		<section class="health-section">
+			<div class="container">
+				<div class="health-section-head reveal">
+					<p class="section-label">CURRENT</p>
+					<h2>当下宜养</h2>
+				</div>
+				<div class="health-spotlight reveal reveal-delay-1">
+					<div>
+						<p class="health-spotlight-label">Today · 顺时调养</p>
+						<h3 class="health-spotlight-title" id="healthSpotlightTitle">—</h3>
+						<p class="health-spotlight-meta" id="healthSpotlightMeta"></p>
+						<p class="health-spotlight-tip" id="healthSpotlightTip"></p>
+					</div>
+					<blockquote class="health-spotlight-quote" id="healthSpotlightQuote"></blockquote>
+				</div>
+			</div>
+		</section>
+		<section class="health-section">
+			<div class="container">
+				<div class="health-section-head reveal">
+					<p class="section-label">FOUR SEASONS</p>
+					<h2>天人合一 · 四时调养</h2>
+					<p class="text-secondary mb-0">中医养生强调人与自然界同步，「春夏养阳，秋冬养阴」。</p>
+				</div>
+				<div class="row g-3 g-md-4">
+					<div class="col-md-6 reveal">
+						<article class="health-season-card health-season-card--spring h-100">
+							<div class="health-season-icon">春</div>
+							<p class="health-season-tag">春季 · 养肝</p>
+							<h3>春三月，此谓发陈</h3>
+							<p><strong>立春—谷雨</strong>：阳气生发，宜早睡早起、广步于庭。饮食少酸多甘，食芽菜、韭菜、菠菜以助生发。情志当舒展，勿抑郁，以免肝气郁结。</p>
+							<p><strong>重点节气</strong>：雨水防湿，惊蛰防倒春寒，春分注意平衡，清明防风。</p>
+						</article>
+					</div>
+					<div class="col-md-6 reveal reveal-delay-1">
+						<article class="health-season-card health-season-card--summer h-100">
+							<div class="health-season-icon">夏</div>
+							<p class="health-season-tag">夏季 · 养心</p>
+							<h3>夏三月，此谓蕃秀</h3>
+							<p><strong>立夏—大暑</strong>：心气当旺，宜晚睡早起、无厌于日。饮食清淡，食苦瓜、绿豆、荷叶以清热。避免大汗后立即冲凉，小暑大暑注意防暑降温。</p>
+							<p><strong>重点节气</strong>：夏至阳极，宜静养；大暑「冬病夏治」，可贴敷调理。</p>
+						</article>
+					</div>
+					<div class="col-md-6 reveal reveal-delay-2">
+						<article class="health-season-card health-season-card--autumn h-100">
+							<div class="health-season-icon">秋</div>
+							<p class="health-season-tag">秋季 · 养肺</p>
+							<h3>秋三月，此谓容平</h3>
+							<p><strong>立秋—霜降</strong>：燥气当令，宜早卧早起、与鸡俱兴。食梨、银耳、百合以润肺生津。「春捂秋冻」，但霜降后须及时添衣。</p>
+							<p><strong>重点节气</strong>：白露勿露身，秋分防秋燥，寒露脚不露。</p>
+						</article>
+					</div>
+					<div class="col-md-6 reveal reveal-delay-3">
+						<article class="health-season-card health-season-card--winter h-100">
+							<div class="health-season-icon">冬</div>
+							<p class="health-season-tag">冬季 · 养肾</p>
+							<h3>冬三月，此谓闭藏</h3>
+							<p><strong>立冬—大寒</strong>：阳气内藏，宜早卧晚起、必待日光。饮食温补，食羊肉、核桃、黑芝麻以温肾助阳。冬至「一阳生」，宜静养藏精。</p>
+							<p><strong>重点节气</strong>：小雪大雪防寒，小寒大寒为一年最冷，尤护头足。</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="health-section">
+			<div class="container">
+				<div class="health-section-head reveal">
+					<p class="section-label">TIPS</p>
+					<h2>节气养生要诀</h2>
+				</div>
+				<div class="health-tips-list reveal reveal-delay-1">
+					<div class="health-tip-item"> <button class="health-tip-btn" type="button" aria-expanded="true"
+							data-bs-target="#healthTip1"> <span class="health-tip-title">起居有常</span> <span
+								class="health-tip-num">壹</span> </button>
+						<div class="health-tip-body health-tip-collapse show" id="healthTip1">
+							随节气调整作息：春生夏长宜早起，秋收冬藏宜早睡。夏至昼长可午休，冬至夜长宜保睡眠。 </div>
+					</div>
+					<div class="health-tip-item"> <button class="health-tip-btn" type="button" aria-expanded="false"
+							data-bs-target="#healthTip2"> <span class="health-tip-title">饮食有节</span> <span
+								class="health-tip-num">贰</span> </button>
+						<div class="health-tip-body health-tip-collapse" id="healthTip2">
+							「不时不食」，应季而食。春食芽、夏食瓜、秋食果、冬食藏。避免反季蔬果过度摄入。 </div>
+					</div>
+					<div class="health-tip-item"> <button class="health-tip-btn" type="button" aria-expanded="false"
+							data-bs-target="#healthTip3"> <span class="health-tip-title">运动适度</span> <span
+								class="health-tip-num">叁</span> </button>
+						<div class="health-tip-body health-tip-collapse" id="healthTip3">
+							春分、秋分宜户外踏青；夏至避免正午暴晒运动；大寒可在室内做柔和拉伸，以微汗为度。 </div>
+					</div>
+					<div class="health-tip-item"> <button class="health-tip-btn" type="button" aria-expanded="false"
+							data-bs-target="#healthTip4"> <span class="health-tip-title">情志调和</span> <span
+								class="health-tip-num">肆</span> </button>
+						<div class="health-tip-body health-tip-collapse" id="healthTip4">
+							春忌怒以养阳，夏忌过喜以养心，秋忌悲忧以养肺，冬忌扰动以养肾。保持心态平和，与节令同频。 </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="film-footer">
+			<div class="container">
+				<div class="footer-links mb-3"> <a href="index.html" class="page-link-transition">首页</a> <a
+						href="knowledge.html" class="page-link-transition">节气知识</a> <a href="customs.html"
+						class="page-link-transition">民俗美食</a> <a href="poetry.html"
+						class="page-link-transition">诗词书画</a> <a href="health.html"
+						class="page-link-transition">时令养生</a> <a href="calendar.html"
+						class="page-link-transition">节气日历</a> </div>
+				<p class="mb-0">二十四节气 · 观象授时</p>
+			</div>
+		</footer>
+		<script src="../lib/jquery.min.js"></script>
+		<script src="../lib/bootstrap.bundle.min.js"></script>
+		<script src="../js/terms-data.js"></script>
+		<script src="../js/scroll.js"></script>
+		<script src="../js/site-common.js"></script>
+		<script src="../js/health.js"></script> <audio id="siteBgm" preload="auto"></audio> <button type="button"
+			id="siteBgmToggle" class="site-bgm-btn" aria-label="背景音乐">♫</button>
+		<script src="../js/site-bgm-config.js"></script>
+		<script src="../js/site-bgm.js"></script>
+	</body>
+</html>

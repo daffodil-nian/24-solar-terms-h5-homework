@@ -1,0 +1,6 @@
+# 本地密钥（勿提交）
+server/bailian-proxy/.env
+js/ai-agent-config.js
+*.mp4
+media/**/*.mp4
+media/*.mp4

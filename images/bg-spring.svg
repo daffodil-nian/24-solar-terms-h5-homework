@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="springGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d4f48"/>
+      <stop offset="50%" style="stop-color:#5a6e62"/>
+      <stop offset="100%" style="stop-color:#8fa89a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#springGrad)"/>
+  <circle cx="320" cy="60" r="40" fill="rgba(184,201,191,0.15)"/>
+  <ellipse cx="80" cy="220" rx="60" ry="20" fill="rgba(60,80,70,0.4)"/>
+  <path d="M0 180 Q100 160 200 175 T400 170 L400 300 L0 300Z" fill="rgba(45,60,52,0.6)"/>
+  <text x="200" y="150" text-anchor="middle" fill="rgba(232,228,223,0.3)" font-size="48" font-family="serif">春</text>
+</svg>

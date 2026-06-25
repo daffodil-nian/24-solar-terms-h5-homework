@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#e8f5e0"/>
+  <path d="M120 220 L120 80" stroke="#5a8848" stroke-width="3"/>
+  <path d="M280 220 L280 90" stroke="#5a8848" stroke-width="3"/>
+  <ellipse cx="120" cy="60" rx="20" ry="12" fill="#6a9858"/>
+  <ellipse cx="110" cy="55" rx="12" ry="8" fill="#7aaa68"/>
+  <ellipse cx="130" cy="55" rx="12" ry="8" fill="#7aaa68"/>
+  <ellipse cx="280" cy="70" rx="18" ry="10" fill="#6a9858"/>
+  <ellipse cx="270" cy="65" rx="10" ry="7" fill="#7aaa68"/>
+  <ellipse cx="290" cy="65" rx="10" ry="7" fill="#7aaa68"/>
+  <text x="200" y="260" text-anchor="middle" font-family="KaiTi,serif" font-size="18" fill="#4a6840">香椿 · 春分食春</text>
+</svg>

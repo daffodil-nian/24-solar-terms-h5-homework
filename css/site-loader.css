@@ -1,0 +1,129 @@
+/* 首页 · 加载屏 */
+.site-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(165deg, #eefafa 0%, #dff5f5 45%, #d0eef0 100%);
+  transition: opacity 0.65s ease, visibility 0.65s ease;
+}
+
+.site-loader.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.site-loader-inner {
+  width: min(88vw, 320px);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.site-loader-icon-wrap {
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(42, 144, 144, 0.18);
+  box-shadow: 0 12px 36px rgba(42, 120, 140, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: siteLoaderIconIn 0.9s ease forwards;
+}
+
+.site-loader-icon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.88);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.site-loader-icon.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.site-loader-icon-fallback {
+  font-family: var(--font-title, KaiTi, serif);
+  font-size: 2.75rem;
+  color: var(--accent, #2a9090);
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.site-loader-title {
+  font-family: var(--font-title, KaiTi, serif);
+  font-size: 1.35rem;
+  color: var(--ocean-deep-text, #1a4555);
+  letter-spacing: 0.22em;
+  margin: 0 0 1.35rem;
+}
+
+.site-loader-progress {
+  height: 6px;
+  background: rgba(42, 144, 144, 0.12);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.site-loader-progress .progress-bar {
+  background: linear-gradient(90deg, var(--accent-light, #5ec4d4), var(--accent, #2a9090));
+  border-radius: 0;
+  transition: width 0.25s ease;
+}
+
+.site-loader-percent {
+  font-family: var(--font-sub, 'Microsoft YaHei', sans-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--text-muted, #5a8a98);
+  margin: 0.65rem 0 0;
+}
+
+body.is-loading {
+  overflow: hidden;
+}
+
+body.is-loading #siteLoader ~ * {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.site-ready #siteLoader ~ * {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.85s ease;
+}
+
+body.site-ready.page-enter {
+  animation: pageFadeIn 1s ease forwards;
+}
+
+@keyframes siteLoaderIconIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-loader-icon-wrap {
+    animation: none;
+  }
+
+  .site-loader-progress .progress-bar {
+    transition: none;
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="二十四节气 · 节气日历">
+		<title>二十四节气 · 节气日历</title>
+		<link href="../lib/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+		<link href="../css/modern.css" rel="stylesheet">
+		<link href="../css/animate.css" rel="stylesheet">
+		<link href="../css/site-bgm.css" rel="stylesheet">
+		<link href="../css/responsive.css" rel="stylesheet">
+		<link href="../css/calendar.css" rel="stylesheet">
+	</head>
+	<body class="page-enter">
+		<div id="scrollProgress" class="scroll-progress-bar"></div>
+		<div id="seasonParticles" data-season="winter"></div>
+		<nav class="navbar navbar-expand-lg navbar-light film-nav fixed-top">
+			<div class="container"> <a class="navbar-brand page-link-transition" href="index.html">二十四节气</a> <button
+					class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"> <span
+						class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link page-link-transition" href="index.html">首页</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="knowledge.html">节气知识</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="customs.html">民俗美食</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="poetry.html">诗词书画</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="health.html">时令养生</a></li>
+						<li class="nav-item"><a class="nav-link active page-link-transition"
+								href="calendar.html">节气日历</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="challenge.html">知识挑战</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition"
+								href="culture-library.html">文化联动库</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="games.html">游戏</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="heritage.html">四时之约</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section class="hero-section hero-section-short hero-modern-inner">
+			<div class="hero-bg hero-bg-winter"></div>
+			<div class="hero-overlay"></div>
+			<div class="hero-content fade-in-slow">
+				<p class="hero-subtitle subtitle-line">CALENDAR</p>
+				<h1 class="hero-title subtitle-line">节气日历</h1>
+				<p class="hero-desc subtitle-line">一览全年二十四节令，知晓今日所处时节，把握天时流转。</p>
+			</div>
+		</section>
+		<section class="section-dark">
+			<div class="container">
+				<div class="today-term-banner reveal">
+					<p class="section-label">TODAY</p>
+					<h2 id="todayTermName">—</h2>
+					<p id="todayTermDesc"></p>
+					<p class="text-secondary mb-0">公历 <span id="todayTermDate">—</span></p>
+					<p class="next-hint" id="nextTermInfo"></p>
+				</div>
+				<p class="section-label-center reveal">TABLE</p>
+				<h2 class="section-title-center reveal reveal-delay-1">全年节气表</h2>
+				<div class="table-responsive reveal reveal-delay-2">
+					<table class="table calendar-table">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>节气</th>
+								<th>大致日期</th>
+								<th>季节</th>
+								<th class="d-none d-md-table-cell">含义</th>
+							</tr>
+						</thead>
+						<tbody id="calendarBody"></tbody>
+					</table>
+				</div>
+				<p class="section-label-center reveal mt-5">GRID</p>
+				<h2 class="section-title-center reveal reveal-delay-1">节气月历格</h2>
+				<p class="text-center text-secondary reveal reveal-delay-1 mb-0">点击格子查看节气详情</p>
+				<div class="calendar-grid reveal reveal-delay-2" id="calendarGrid"></div>
+			</div>
+		</section>
+		<footer class="film-footer">
+			<div class="container">
+				<div class="footer-links mb-3"> <a href="index.html" class="page-link-transition">首页</a> <a
+						href="knowledge.html" class="page-link-transition">节气知识</a> <a href="customs.html"
+						class="page-link-transition">民俗美食</a> <a href="poetry.html"
+						class="page-link-transition">诗词书画</a> <a href="health.html"
+						class="page-link-transition">时令养生</a> <a href="calendar.html"
+						class="page-link-transition">节气日历</a> </div>
+				<p class="mb-0">二十四节气 · 观象授时</p>
+			</div>
+		</footer>
+		<div class="modal fade term-modal" id="termModal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="termModalTitle"></h5> <button type="button" class="btn-close"
+							data-bs-dismiss="modal" aria-label="关闭"></button>
+					</div>
+					<div class="modal-body" id="termModalBody"></div>
+					<div class="modal-footer"> <button type="button" class="btn btn-film"
+							data-bs-dismiss="modal">关闭</button> </div>
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jquery.min.js"></script>
+		<script src="../lib/bootstrap.bundle.min.js"></script>
+		<script src="../js/terms-data.js"></script>
+		<script src="../js/term-slugs.js"></script>
+		<script src="../js/term-images.js"></script>
+		<script src="../js/scroll.js"></script>
+		<script src="../js/site-common.js"></script>
+		<script src="../js/calendar.js"></script> <audio id="siteBgm" preload="auto"></audio> <button type="button"
+			id="siteBgmToggle" class="site-bgm-btn" aria-label="背景音乐">♫</button>
+		<script src="../js/site-bgm-config.js"></script>
+		<script src="../js/site-bgm.js"></script>
+	</body>
+</html>

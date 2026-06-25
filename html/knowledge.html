@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="二十四节气 · 节气知识 · 由来与地理">
+		<title>二十四节气 · 节气知识</title>
+		<link href="../lib/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+		<link href="../css/modern.css" rel="stylesheet">
+		<link href="../css/knowledge.css" rel="stylesheet">
+		<link href="../css/animate.css" rel="stylesheet">
+		<link href="../css/site-bgm.css" rel="stylesheet">
+		<link href="../css/responsive.css" rel="stylesheet">
+	</head>
+	<body class="page-enter">
+		<div id="scrollProgress" class="scroll-progress-bar"></div>
+		<div id="seasonParticles" data-season="autumn"></div>
+		<nav class="navbar navbar-expand-lg navbar-light film-nav fixed-top">
+			<div class="container"> <a class="navbar-brand page-link-transition" href="index.html">二十四节气</a> <button
+					class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"> <span
+						class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link page-link-transition" href="index.html">首页</a></li>
+						<li class="nav-item"><a class="nav-link active page-link-transition"
+								href="knowledge.html">节气知识</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="customs.html">民俗美食</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="poetry.html">诗词书画</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="health.html">时令养生</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="calendar.html">节气日历</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="challenge.html">知识挑战</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition"
+								href="culture-library.html">文化联动库</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="games.html">游戏</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="heritage.html">四时之约</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section class="hero-section hero-section-short hero-modern-inner">
+			<div class="hero-bg hero-bg-summer"></div>
+			<div class="hero-overlay"></div>
+			<div class="hero-content fade-in-slow">
+				<p class="hero-subtitle subtitle-line">KNOWLEDGE</p>
+				<h1 class="hero-title subtitle-line">节气知识</h1>
+				<p class="hero-desc subtitle-line">观象授时的千年智慧，地理分布的风物差异，尽在节气知识的纵深里。</p>
+			</div>
+		</section>
+		<section class="section-dark section-compact-top" id="current-term">
+			<div class="container">
+				<p class="section-label reveal">CURRENT TERM</p>
+				<h2 class="section-title-center reveal reveal-delay-1">今日节气</h2>
+				<div class="knowledge-spotlight reveal reveal-delay-2" id="knowledgeSpotlight">
+					<div class="knowledge-spotlight-main">
+						<p class="knowledge-spotlight-badge">Today · 观象授时</p>
+						<h3 class="knowledge-spotlight-title" id="spotlightTermName">—</h3>
+						<p class="knowledge-spotlight-meta" id="spotlightTermDate"></p>
+						<p class="knowledge-spotlight-desc" id="spotlightTermDesc"></p>
+						<p class="knowledge-spotlight-next" id="spotlightNext"></p>
+						<div class="knowledge-spotlight-actions"> <a href="calendar.html"
+								class="btn btn-film-solid page-link-transition">节气日历</a> <a href="term.html"
+								class="btn btn-film page-link-transition d-none" id="spotlightDeepLink">深入了解</a> </div>
+					</div>
+					<figure class="knowledge-spotlight-figure"> <img id="spotlightTermImg" src="" alt="" width="400"
+							height="300">
+						<figcaption id="spotlightTermCaption"></figcaption>
+					</figure>
+					<div class="knowledge-spotlight-aside">
+						<blockquote class="knowledge-spotlight-poetry" id="spotlightPoetry"></blockquote>
+						<p class="knowledge-spotlight-detail" id="spotlightTermDetail"></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-dark knowledge-terms-section" id="terms-overview">
+			<div class="container">
+				<div class="knowledge-section-head reveal">
+					<div>
+						<p class="section-label">24 SOLAR TERMS</p>
+						<h2 class="section-title-center mb-0">二十四节气一览</h2>
+					</div>
+					<div class="btn-group season-pills" id="knowledgeSeasonFilter" role="group" aria-label="季节筛选">
+						<button type="button" class="btn filter-btn active" data-season="all">全部</button> <button
+							type="button" class="btn filter-btn" data-season="spring">春</button> <button type="button"
+							class="btn filter-btn" data-season="summer">夏</button> <button type="button"
+							class="btn filter-btn" data-season="autumn">秋</button> <button type="button"
+							class="btn filter-btn" data-season="winter">冬</button> </div>
+				</div>
+				<div class="row g-3 reveal reveal-delay-1" id="knowledgeTermGrid"></div>
+			</div>
+		</section>
+		<section class="section-dark" id="history">
+			<div class="container">
+				<div class="subtitle-block reveal">
+					<p class="section-label">HISTORY</p>
+					<h2>观象授时</h2>
+					<p>早在商代，古人就已有了四时的概念。春秋战国时期，人们通过观察太阳周年运动，认知一年中时令、气候、物候等方面变化规律，逐渐形成了二十四节气体系。</p>
+					<p>2016 年，二十四节气被列入联合国教科文组织人类非物质文化遗产代表作名录。</p>
+				</div>
+			</div>
+		</section>
+		<section class="section-dark section-compact-top">
+			<div class="container">
+				<p class="section-label-center reveal">TIMELINE</p>
+				<h2 class="section-title-center reveal reveal-delay-1">历史脉络</h2>
+				<div class="timeline">
+					<div class="timeline-item left reveal">
+						<div class="timeline-dot"></div>
+						<div class="year">商周时期</div>
+						<h4>四时已立</h4>
+						<p>商代已有春、夏、秋、冬四时的概念，为后来节气体系的形成奠定了基础。</p>
+					</div>
+					<div class="timeline-item right reveal reveal-delay-1">
+						<div class="timeline-dot"></div>
+						<div class="year">春秋战国</div>
+						<h4>八节初成</h4>
+						<p>至迟到战国末期，已出现立春、春分、立夏、夏至、立秋、秋分、立冬、冬至八个关键节气。</p>
+					</div>
+					<div class="timeline-item left reveal reveal-delay-2">
+						<div class="timeline-dot"></div>
+						<div class="year">秦汉时期</div>
+						<h4>二十四节气完备</h4>
+						<p>《淮南子·天文训》完整记载了二十四节气名称及其顺序，体系趋于完备。</p>
+					</div>
+					<div class="timeline-item right reveal reveal-delay-3">
+						<div class="timeline-dot"></div>
+						<div class="year">2016年</div>
+						<h4>列入非遗</h4>
+						<p>二十四节气被联合国教科文组织列入人类非物质文化遗产代表作名录。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-dark" id="map">
+			<div class="container">
+				<p class="section-label-center reveal">GEOGRAPHY</p>
+				<h2 class="section-title-center reveal reveal-delay-1">地理分布</h2>
+				<div class="map-container reveal reveal-delay-2">
+					<div class="china-map-stage" id="chinaMapStage"> <img src="../images/MapOfChina1.png"
+							alt="中国七大地理分区与节气分布示意" class="china-map-img" id="chinaMapImage" width="1536" height="1024">
+						<div class="china-map-hotspots" id="chinaMapHotspots" aria-hidden="true"></div>
+					</div>
+					<div class="map-region-chips" id="mapRegionChips" role="group" aria-label="选择地理区域"></div>
+					<div class="map-info-panel reveal" id="mapInfoPanel">
+						<h3 id="mapInfoTitle">选择区域</h3>
+						<p id="mapInfoText">点击地图分区或下方标签，查看该地区节气的气候特点与农事习俗。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-dark section-compact-top" id="media">
+			<div class="container">
+				<p class="section-label-center reveal">MEDIA</p>
+				<h2 class="section-title-center reveal reveal-delay-1">音视频科普</h2>
+				<div class="media-tabs reveal"> <button class="media-tab active" data-tab="video">纪录片</button> <button
+						class="media-tab" data-tab="audio">节气音频</button> </div>
+				<div class="media-panel reveal reveal-delay-1" id="videoPanel">
+					<div class="film-player breathe-light"> <video id="filmVideoPlayer" class="film-video-player"
+							preload="metadata" playsinline>
+							<source src="../media/solarTerms.mp4" type="video/mp4"> 您的浏览器不支持 HTML5 视频播放。
+						</video>
+						<div class="player-controls"> <button class="player-btn" id="videoPlayBtn"
+								title="播放/暂停">&#9654;</button> <button class="player-btn" id="videoMuteBtn"
+								title="静音">&#128264;</button>
+							<div class="progress-bar-wrap" id="videoProgress">
+								<div class="progress-bar-fill" id="videoProgressFill"></div>
+							</div> <span class="player-time"><span id="videoCurrentTime">00:00</span> / <span
+									id="videoDuration">00:00</span></span> <button class="player-btn"
+								id="videoQualityBtn" title="画质">高清 720P</button>
+						</div>
+					</div>
+				</div>
+				<div class="media-panel reveal" id="audioPanel" hidden>
+					<div class="audio-card" data-audio="../media/spring.mp3">
+						<div class="play-icon">&#9654;</div>
+						<div>
+							<h4>立春 · 东风解冻</h4>
+							<p>古琴与箫合奏</p>
+							<div class="audio-progress">
+								<div class="audio-progress-fill"></div>
+							</div>
+						</div>
+					</div>
+					<div class="audio-card" data-audio="../media/summer.mp3">
+						<div class="play-icon">&#9654;</div>
+						<div>
+							<h4>夏至 · 蝉鸣悠长</h4>
+							<p>自然采样与轻音乐</p>
+							<div class="audio-progress">
+								<div class="audio-progress-fill"></div>
+							</div>
+						</div>
+					</div>
+					<div class="audio-card" data-audio="../media/autumn.mp3">
+						<div class="play-icon">&#9654;</div>
+						<div>
+							<h4>秋分 · 金风玉露</h4>
+							<p>琵琶独奏</p>
+							<div class="audio-progress">
+								<div class="audio-progress-fill"></div>
+							</div>
+						</div>
+					</div>
+					<div class="audio-card" data-audio="../media/winter.mp3">
+						<div class="play-icon">&#9654;</div>
+						<div>
+							<h4>冬至 · 一阳初生</h4>
+							<p>编钟与笛</p>
+							<div class="audio-progress">
+								<div class="audio-progress-fill"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="film-footer">
+			<div class="container">
+				<div class="footer-links mb-3"> <a href="index.html" class="page-link-transition">首页</a> <a
+						href="knowledge.html" class="page-link-transition">节气知识</a> <a href="customs.html"
+						class="page-link-transition">民俗美食</a> <a href="poetry.html"
+						class="page-link-transition">诗词书画</a> <a href="health.html"
+						class="page-link-transition">时令养生</a> <a href="calendar.html"
+						class="page-link-transition">节气日历</a> </div>
+				<p class="mb-0">二十四节气 · 观象授时</p>
+			</div>
+		</footer>
+		<div class="modal fade term-modal" id="termModal" tabindex="-1" aria-labelledby="termModalTitle"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="termModalTitle"></h5> <button type="button" class="btn-close"
+							data-bs-dismiss="modal" aria-label="关闭"></button>
+					</div>
+					<div class="modal-body">
+						<figure class="knowledge-modal-figure d-none" id="termModalFigure"> <img id="termModalImg"
+								src="" alt=""> </figure>
+						<div id="termModalBody"></div>
+					</div>
+					<div class="modal-footer"> <a href="term.html" class="btn btn-film d-none"
+							id="termModalDeepLink">专题页</a> <button type="button" class="btn btn-film"
+							data-bs-dismiss="modal">关闭</button> </div>
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jquery.min.js"></script>
+		<script src="../lib/bootstrap.bundle.min.js"></script>
+		<script src="../js/terms-seasonal-content.js"></script>
+		<script src="../js/terms-data.js"></script>
+		<script src="../js/term-slugs.js"></script>
+		<script src="../js/term-images.js"></script>
+		<script src="../js/term-pages-data.js"></script>
+		<script src="../js/scroll.js"></script>
+		<script src="../js/site-common.js"></script>
+		<script src="../js/knowledge.js"></script>
+		<script src="../js/geography.js"></script>
+		<script src="../js/video.js"></script> <audio id="siteBgm" preload="auto"></audio> <button type="button"
+			id="siteBgmToggle" class="site-bgm-btn" aria-label="背景音乐">♫</button>
+		<script src="../js/site-bgm-config.js"></script>
+		<script src="../js/site-bgm.js"></script>
+	</body>
+</html>

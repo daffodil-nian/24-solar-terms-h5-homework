@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320">
+  <rect width="400" height="320" fill="#e8f2f2"/>
+  <defs>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8ecec"/>
+      <stop offset="100%" stop-color="#eef6f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="320" fill="url(#mist)" opacity="0.5"/>
+  <!-- rain -->
+  <g opacity="0.25" stroke="#a8c8cc" stroke-width="0.8">
+    <line x1="40" y1="20" x2="35" y2="50"/><line x1="120" y1="10" x2="115" y2="45"/>
+    <line x1="200" y1="30" x2="195" y2="60"/><line x1="280" y1="15" x2="275" y2="48"/>
+    <line x1="360" y1="25" x2="355" y2="55"/><line x1="80" y1="80" x2="75" y2="110"/>
+    <line x1="300" y1="90" x2="295" y2="120"/>
+  </g>
+  <!-- stem -->
+  <path d="M200 280 Q180 220 170 160 Q165 120 175 80" stroke="#5a9088" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M200 260 Q220 200 235 150 Q245 110 230 70" stroke="#6aa898" stroke-width="2.5" fill="none" opacity="0.65"/>
+  <path d="M190 240 Q160 200 140 170" stroke="#5a9088" stroke-width="2" fill="none" opacity="0.5"/>
+  <!-- blooms -->
+  <ellipse cx="175" cy="78" rx="10" ry="16" fill="#c8e8dc" stroke="#7ab0a0" stroke-width="1"/>
+  <ellipse cx="188" cy="72" rx="8" ry="12" fill="#d8f0e8" stroke="#7ab0a0" stroke-width="0.8"/>
+  <ellipse cx="232" cy="68" rx="9" ry="14" fill="#c8e8dc" stroke="#7ab0a0" stroke-width="1"/>
+  <circle cx="175" cy="78" r="3" fill="#d2b450" opacity="0.6"/>
+  <circle cx="232" cy="68" r="2.5" fill="#d2b450" opacity="0.5"/>
+  <!-- water ripples -->
+  <ellipse cx="200" cy="290" rx="60" ry="8" fill="none" stroke="#94bcc0" stroke-width="1" opacity="0.4"/>
+  <ellipse cx="200" cy="290" rx="40" ry="5" fill="none" stroke="#94bcc0" stroke-width="0.8" opacity="0.3"/>
+  <text x="200" y="310" text-anchor="middle" font-family="KaiTi,serif" font-size="14" fill="#4a6870">雨水 · 雨中幽兰</text>
+</svg>

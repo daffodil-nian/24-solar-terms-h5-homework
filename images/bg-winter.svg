@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="winterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2d30"/>
+      <stop offset="50%" style="stop-color:#4a4e52"/>
+      <stop offset="100%" style="stop-color:#9a9ea3"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#winterGrad)"/>
+  <circle cx="80" cy="50" r="2" fill="rgba(197,200,203,0.5)"/>
+  <circle cx="150" cy="80" r="1.5" fill="rgba(197,200,203,0.4)"/>
+  <circle cx="280" cy="40" r="2" fill="rgba(197,200,203,0.5)"/>
+  <circle cx="350" cy="90" r="1.5" fill="rgba(197,200,203,0.3)"/>
+  <path d="M0 200 Q100 210 200 195 T400 205 L400 300 L0 300Z" fill="rgba(35,38,42,0.6)"/>
+  <text x="200" y="150" text-anchor="middle" fill="rgba(232,228,223,0.3)" font-size="48" font-family="serif">冬</text>
+</svg>

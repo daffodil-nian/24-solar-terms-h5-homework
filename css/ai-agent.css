@@ -1,0 +1,260 @@
+/* ============================================
+   节气智能体 · 可接入外部 API 的占位 UI
+   ============================================ */
+
+.ai-agent-teaser {
+  margin-top: 1.25rem;
+  padding: 1rem 1.1rem;
+  background: linear-gradient(135deg, rgba(77, 184, 184, 0.14), rgba(94, 196, 212, 0.08));
+  border: 1px solid rgba(77, 184, 184, 0.35);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.ai-agent-teaser-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.ai-agent-teaser-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4db8b8, #2a9090);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.ai-agent-teaser-title {
+  font-family: var(--font-sub);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ocean-deep-text, #1a4555);
+  margin: 0;
+}
+
+.ai-agent-teaser-badge {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(42, 144, 144, 0.15);
+  color: #2a9090;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.ai-agent-teaser-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ai-agent-teaser-form input {
+  flex: 1;
+  border: 1px solid rgba(77, 184, 184, 0.4);
+  border-radius: 10px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.88rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a4555;
+}
+
+.ai-agent-teaser-form input:focus {
+  outline: none;
+  border-color: #4db8b8;
+  box-shadow: 0 0 0 3px rgba(77, 184, 184, 0.2);
+}
+
+.ai-agent-teaser-form button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.55rem 1rem;
+  background: linear-gradient(135deg, #3aa8a8, #2a9090);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ai-agent-teaser-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(42, 144, 144, 0.35);
+}
+
+.ai-agent-fab {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: calc(var(--site-bgm-z, 10050) + 2);
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #4db8b8, #2a7a8a);
+  color: #fff;
+  font-size: 1.35rem;
+  cursor: pointer;
+  box-shadow: 0 10px 32px rgba(42, 120, 140, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ai-agent-fab:hover {
+  transform: scale(1.06);
+  box-shadow: 0 14px 40px rgba(42, 120, 140, 0.45);
+}
+
+.ai-agent-panel {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 5.5rem;
+  z-index: calc(var(--site-bgm-z, 10050) + 2);
+  width: min(380px, calc(100vw - 2rem));
+  max-height: min(520px, calc(100vh - 7rem));
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(77, 184, 184, 0.35);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(26, 69, 85, 0.22);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(0.96);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  backdrop-filter: blur(16px);
+}
+
+.ai-agent-panel.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.ai-agent-panel.ai-agent-panel--anchored {
+  right: auto;
+  bottom: auto;
+}
+
+.ai-agent-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(77, 184, 184, 0.2);
+}
+
+.ai-agent-panel-header h3 {
+  margin: 0;
+  font-family: var(--font-sub);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a4555;
+}
+
+.ai-agent-panel-close {
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #5a8a98;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.ai-agent-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 200px;
+}
+
+.ai-agent-msg {
+  max-width: 88%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.ai-agent-msg--bot {
+  align-self: flex-start;
+  background: rgba(77, 184, 184, 0.12);
+  color: #1a4555;
+  border-bottom-left-radius: 4px;
+}
+
+.ai-agent-msg--user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #4db8b8, #3aa8a8);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.ai-agent-panel-form {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem 0.5rem;
+  border-top: 1px solid rgba(77, 184, 184, 0.2);
+}
+
+.ai-agent-panel-form input {
+  flex: 1;
+  border: 1px solid rgba(77, 184, 184, 0.35);
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.88rem;
+}
+
+.ai-agent-panel-form button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.55rem 0.85rem;
+  background: #2a9090;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.ai-agent-panel-hint {
+  margin: 0;
+  padding: 0 1rem 0.75rem;
+  font-size: 0.72rem;
+  color: #5a8a98;
+  text-align: center;
+}
+
+.ai-agent-typing {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.ai-agent-bar {
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+.ai-agent-bar .ai-agent-teaser {
+  margin-top: 0;
+  max-width: 720px;
+}
+
+@media (max-width: 991.98px) {
+  .ai-agent-fab {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .ai-agent-panel {
+    right: 1rem;
+    bottom: 5rem;
+  }
+}

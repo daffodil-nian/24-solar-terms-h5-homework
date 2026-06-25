@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="二十四节气 · 创意文化工作室风格首页">
+		<title>二十四节气</title>
+		<link href="../lib/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+		<link href="../css/modern.css" rel="stylesheet">
+		<link href="../css/index2.css" rel="stylesheet">
+		<link href="../css/ai-agent.css" rel="stylesheet">
+		<link href="../css/site-bgm.css" rel="stylesheet">
+		<link href="../css/responsive.css" rel="stylesheet">
+	</head>
+	<body class="page-index2 page-enter">
+		<div id="scrollProgress" class="scroll-progress-bar"></div>
+		<div class="index2-shape index2-shape-1" aria-hidden="true"></div>
+		<div class="index2-shape index2-shape-2" aria-hidden="true"></div>
+		<div class="index2-shape index2-shape-3" aria-hidden="true"></div>
+		<nav class="navbar navbar-expand-lg navbar-light film-nav fixed-top">
+			<div class="container"> <a class="navbar-brand" href="index2.html">二十四节气</a> <button class="navbar-toggler"
+					type="button" data-bs-toggle="collapse" data-bs-target="#mainNav2" aria-controls="mainNav2"
+					aria-expanded="false" aria-label="切换导航"> <span class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="mainNav2">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link active" href="index2.html">首页</a></li>
+						<li class="nav-item"><a class="nav-link" href="knowledge.html">节气知识</a></li>
+						<li class="nav-item"><a class="nav-link" href="customs.html">民俗美食</a></li>
+						<li class="nav-item"><a class="nav-link" href="poetry.html">诗词书画</a></li>
+						<li class="nav-item"><a class="nav-link" href="health.html">时令养生</a></li>
+						<li class="nav-item"><a class="nav-link" href="calendar.html">节气日历</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="challenge.html">知识挑战</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition"
+								href="culture-library.html">文化联动库</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="games.html">游戏</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="heritage.html">四时之约</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main> <!-- Hero：Bemox 左右分栏 -->
+			<section class="index2-hero">
+				<div class="container">
+					<div class="row align-items-center g-4 g-xl-5">
+						<div class="col-lg-6">
+							<p class="index2-eyebrow">非遗文化 · 观象授时</p>
+							<h1 class="index2-hero-title"> 传承千年的<br> <span class="index2-accent">二十四节气</span> </h1>
+							<p class="index2-hero-text"> 以时间为经、物候为纬，在克制留白之间呈现中华历法的当代质感。科技可感，人文可触。 </p>
+							<div class="d-flex flex-wrap gap-3 mb-4 mb-lg-5"> <a href="calendar.html"
+									class="btn btn-film-solid btn-lg px-4">开始探索</a> <a href="knowledge.html"
+									class="btn btn-film btn-lg px-4">了解更多</a> </div>
+							<div class="index2-today card border-0 shadow-sm" id="todayTermCard">
+								<div class="card-body d-flex align-items-center gap-3 py-3"> <span
+										class="index2-today-dot"></span>
+									<div>
+										<p class="index2-today-label mb-0">今日节气</p>
+										<p class="index2-today-value mb-0" id="todayTermText">载入中…</p>
+									</div>
+								</div>
+							</div>
+							<div class="row g-3 mt-2 index2-stats">
+								<div class="col-4">
+									<div class="index2-stat"> <strong class="count-up" data-target="24">0</strong>
+										<span>节气</span> </div>
+								</div>
+								<div class="col-4">
+									<div class="index2-stat"> <strong class="count-up" data-target="4">0</strong>
+										<span>季节</span> </div>
+								</div>
+								<div class="col-4">
+									<div class="index2-stat"> <strong class="count-up" data-target="3000">0</strong>
+										<span>年历史</span> </div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="index2-hero-visual">
+								<div id="heroCarousel" class="carousel slide index2-carousel" data-bs-ride="carousel"
+									data-bs-interval="5000">
+									<div class="carousel-indicators"> <button type="button"
+											data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+											aria-label="春"></button> <button type="button"
+											data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="夏"></button>
+										<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
+											aria-label="秋"></button> <button type="button"
+											data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="冬"></button>
+									</div>
+									<div class="carousel-inner rounded-4 overflow-hidden shadow">
+										<div class="carousel-item active">
+											<div class="index2-slide index2-slide--spring"> <img
+													src="../images/bg-spring.svg" alt="" class="index2-slide-img"
+													aria-hidden="true">
+												<div class="index2-slide-caption"> <span>Spring</span>
+													<h3>立春 · 万物起始</h3>
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<div class="index2-slide index2-slide--summer"> <img
+													src="../images/bg-summer.svg" alt="" class="index2-slide-img"
+													aria-hidden="true">
+												<div class="index2-slide-caption"> <span>Summer</span>
+													<h3>夏至 · 日长之至</h3>
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<div class="index2-slide index2-slide--autumn"> <img
+													src="../images/bg-autumn.svg" alt="" class="index2-slide-img"
+													aria-hidden="true">
+												<div class="index2-slide-caption"> <span>Autumn</span>
+													<h3>秋分 · 昼夜平分</h3>
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<div class="index2-slide index2-slide--winter"> <img
+													src="../images/bg-winter.svg" alt="" class="index2-slide-img"
+													aria-hidden="true">
+												<div class="index2-slide-caption"> <span>Winter</span>
+													<h3>冬至 · 一阳初生</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="index2-float-card index2-float-card-1"> <strong>24</strong>
+									<span>节气体系</span> </div>
+								<div class="index2-float-card index2-float-card-2"> <strong>4</strong> <span>四季轮回</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> <!-- 滚动字幕条 -->
+			<section class="index2-marquee" aria-hidden="true">
+				<div class="index2-marquee-track"> <span>立春 · 雨水 · 惊蛰 · 春分 · 清明 · 谷雨 · 立夏 · 小满 · 芒种 · 夏至 · 小暑 · 大暑 ·
+					</span> <span>立秋 · 处暑 · 白露 · 秋分 · 寒露 · 霜降 · 立冬 · 小雪 · 大雪 · 冬至 · 小寒 · 大寒 · </span> <span>立春 · 雨水 · 惊蛰
+						· 春分 · 清明 · 谷雨 · 立夏 · 小满 · 芒种 · 夏至 · 小暑 · 大暑 · </span> <span>立秋 · 处暑 · 白露 · 秋分 · 寒露 · 霜降 · 立冬 ·
+						小雪 · 大雪 · 冬至 · 小寒 · 大寒 · </span> </div>
+			</section> <!-- 服务卡片 -->
+			<section class="index2-services py-5">
+				<div class="container py-lg-4">
+					<div class="text-center mb-5">
+						<p class="index2-eyebrow justify-content-center">Explore</p>
+						<h2 class="index2-section-title">走进节气世界</h2>
+						<p class="index2-section-desc mx-auto">从知识、民俗到养生，六个入口带你读懂中国人的时间哲学。</p>
+					</div>
+					<div class="row g-4">
+						<div class="col-md-6 col-lg-4"> <a href="knowledge.html"
+								class="card index2-service-card h-100 border-0 shadow-sm text-decoration-none">
+								<div class="card-body p-4">
+									<div class="index2-service-icon">知</div>
+									<h3 class="h5 card-title">节气知识</h3>
+									<p class="card-text text-muted">物候、天文与历法渊源，读懂每一节气的来处。</p> <span
+										class="index2-link-more">查看详情 →</span>
+								</div>
+							</a> </div>
+						<div class="col-md-6 col-lg-4"> <a href="customs.html"
+								class="card index2-service-card h-100 border-0 shadow-sm text-decoration-none">
+								<div class="card-body p-4">
+									<div class="index2-service-icon">俗</div>
+									<h3 class="h5 card-title">民俗美食</h3>
+									<p class="card-text text-muted">节令习俗与应季饮食，烟火气里的文化记忆。</p> <span
+										class="index2-link-more">查看详情 →</span>
+								</div>
+							</a> </div>
+						<div class="col-md-6 col-lg-4"> <a href="poetry.html"
+								class="card index2-service-card h-100 border-0 shadow-sm text-decoration-none">
+								<div class="card-body p-4">
+									<div class="index2-service-icon">诗</div>
+									<h3 class="h5 card-title">诗词书画</h3>
+									<p class="card-text text-muted">古人笔下的四季流转，笔墨间的节气意境。</p> <span
+										class="index2-link-more">查看详情 →</span>
+								</div>
+							</a> </div>
+						<div class="col-md-6 col-lg-4"> <a href="health.html"
+								class="card index2-service-card h-100 border-0 shadow-sm text-decoration-none">
+								<div class="card-body p-4">
+									<div class="index2-service-icon">养</div>
+									<h3 class="h5 card-title">时令养生</h3>
+									<p class="card-text text-muted">顺时而养，顺应自然节律调整起居与饮食。</p> <span
+										class="index2-link-more">查看详情 →</span>
+								</div>
+							</a> </div>
+						<div class="col-md-6 col-lg-4"> <a href="calendar.html"
+								class="card index2-service-card h-100 border-0 shadow-sm text-decoration-none">
+								<div class="card-body p-4">
+									<div class="index2-service-icon">历</div>
+									<h3 class="h5 card-title">节气日历</h3>
+									<p class="card-text text-muted">全年二十四节气的日期与物候，一目了然。</p> <span
+										class="index2-link-more">查看详情 →</span>
+								</div>
+							</a> </div>
+						<div class="col-md-6 col-lg-4"> <a href="heritage.html"
+								class="card index2-service-card h-100 border-0 shadow-sm text-decoration-none">
+								<div class="card-body p-4">
+									<div class="index2-service-icon">约</div>
+									<h3 class="h5 card-title">四时之约</h3>
+									<p class="card-text text-muted">节气文脉与岁时记忆，赴一场与四时的约定。</p> <span
+										class="index2-link-more">查看详情 →</span>
+								</div>
+							</a> </div>
+					</div>
+				</div>
+			</section> <!-- 24 节气 -->
+			<section class="index2-terms py-5">
+				<div class="container">
+					<div class="card border-0 shadow index2-terms-card">
+						<div class="card-body p-4 p-lg-5">
+							<div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+								<div>
+									<p class="index2-eyebrow mb-2">24 Solar Terms</p>
+									<h2 class="index2-section-title mb-0">全年节气一览</h2>
+								</div>
+								<div class="btn-group btn-group-sm" role="group" id="seasonPills"> <button type="button"
+										class="btn btn-outline-secondary active" data-season="all">全部</button> <button
+										type="button" class="btn btn-outline-secondary" data-season="spring">春</button>
+									<button type="button" class="btn btn-outline-secondary"
+										data-season="summer">夏</button> <button type="button"
+										class="btn btn-outline-secondary" data-season="autumn">秋</button> <button
+										type="button" class="btn btn-outline-secondary" data-season="winter">冬</button>
+								</div>
+							</div>
+							<div class="d-flex flex-nowrap gap-2 overflow-auto pb-2" id="termStrip"></div>
+							<hr class="my-4">
+							<div class="ai-agent-teaser">
+								<div class="ai-agent-teaser-head"> <span class="ai-agent-teaser-icon"
+										aria-hidden="true">✦</span>
+									<p class="ai-agent-teaser-title">节气智能体</p> <span
+										class="ai-agent-teaser-badge">AI</span>
+								</div>
+								<form class="ai-agent-teaser-form" id="aiAgentTeaserForm"> <input type="text"
+										class="form-control" placeholder="问我：今日节气宜做什么？" autocomplete="off"
+										aria-label="提问"> <button type="submit" class="btn btn-film-solid">提问</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="index2-footer py-5">
+			<div class="container">
+				<div class="row g-4 align-items-center">
+					<div class="col-lg-6"> <a class="index2-logo text-white text-decoration-none"
+							href="index2.html">二十四节气</a>
+						<p class="index2-footer-desc mt-3 mb-0">观象授时 · 顺时而行</p>
+					</div>
+					<div class="col-lg-6">
+						<div class="d-flex flex-wrap gap-3 justify-content-lg-end"> <a href="knowledge.html"
+								class="index2-footer-link">节气知识</a> <a href="customs.html"
+								class="index2-footer-link">民俗美食</a> <a href="calendar.html"
+								class="index2-footer-link">节气日历</a> </div>
+					</div>
+				</div>
+				<hr class="border-secondary border-opacity-25 my-4">
+				<p class="text-center text-white-50 small mb-0">二十四节气 · 观象授时</p>
+			</div>
+		</footer>
+		<div class="modal fade" id="termModal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="termModalTitle"></h5> <button type="button" class="btn-close"
+							data-bs-dismiss="modal" aria-label="关闭"></button>
+					</div>
+					<div class="modal-body" id="termModalBody"></div>
+					<div class="modal-footer"> <button type="button" class="btn btn-secondary"
+							data-bs-dismiss="modal">关闭</button> </div>
+				</div>
+			</div>
+		</div> <button type="button" class="ai-agent-fab btn btn-film-solid" id="aiAgentFab" aria-label="智能体">✦</button>
+		<div class="ai-agent-panel" id="aiAgentPanel" role="dialog">
+			<div class="ai-agent-panel-header">
+				<h3>节气智能体</h3> <button type="button" class="ai-agent-panel-close" id="aiAgentClose"
+					aria-label="关闭">×</button>
+			</div>
+			<div class="ai-agent-messages" id="aiAgentMessages"></div>
+			<form class="ai-agent-panel-form" id="aiAgentPanelForm"> <input type="text" class="form-control"
+					placeholder="输入问题…" autocomplete="off"> <button type="submit" class="btn btn-film-solid">发送</button>
+			</form>
+			<p class="ai-agent-panel-hint" id="aiAgentPanelHint">演示模式 · 配置 js/ai-agent-config.js 后连接百炼</p>
+		</div>
+		<script src="../lib/jquery.min.js"></script>
+		<script src="../lib/bootstrap.bundle.min.js"></script>
+		<script src="../js/terms-data.js"></script>
+		<script src="../js/ai-agent-config.js"></script>
+		<script src="../js/ai-agent.js"></script>
+		<script src="../js/scroll.js"></script>
+		<script src="../js/site-common.js"></script>
+		<script src="../js/index2.js"></script>
+		<script src="../js/site-bgm-config.js"></script>
+		<script src="../js/site-bgm.js"></script>
+	</body>
+</html>

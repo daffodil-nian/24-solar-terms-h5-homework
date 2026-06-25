@@ -1,0 +1,34 @@
+/* 露珠 SVG 飘落 · 雨水专题 */
+
+.dew-drop-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.dew-drop-fall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.dew-drop-svg {
+  display: block;
+  filter: drop-shadow(0 1px 3px rgba(100, 150, 165, 0.18));
+}
+
+.dew-drop-static {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dew-drop-fall {
+    animation: none !important;
+  }
+}

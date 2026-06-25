@@ -1,0 +1,39 @@
+/* ============================================
+   谷雨专题 · 雨生百谷
+   ============================================ */
+
+.term-guyu {
+  --gy-sky: rgb(216, 232, 212);
+  --gy-grain: rgb(118, 148, 102);
+  --gy-gold: rgb(190, 168, 100);
+  --gy-ink: rgb(68, 82, 62);
+  --gy-ink-soft: rgb(98, 118, 88);
+  --gy-ivory: rgb(246, 250, 242);
+
+  background:
+    radial-gradient(ellipse at 60% 10%, rgba(230, 244, 220, 0.5) 0%, transparent 50%),
+    linear-gradient(180deg, var(--gy-sky) 0%, var(--gy-ivory) 55%, rgba(200, 220, 190, 0.6) 100%);
+}
+
+.term-guyu .scroll-progress-bar {
+  background: linear-gradient(to right, var(--gy-grain), var(--gy-gold), rgb(140, 170, 120));
+}
+
+.term-guyu .film-nav {
+  background: rgba(246, 250, 242, 0.9) !important;
+  border-bottom: 1px solid rgba(118, 148, 102, 0.28);
+}
+
+.term-guyu .film-nav .navbar-brand {
+  color: var(--gy-grain) !important;
+}
+
+.term-guyu .term-sub-nav {
+  background: rgba(246, 250, 242, 0.94);
+  border-bottom: 1px solid rgba(118, 148, 102, 0.22);
+}
+
+.term-guyu .term-nav-chip.active {
+  background: linear-gradient(135deg, rgb(108, 138, 92), rgb(138, 168, 118));
+  color: var(--gy-ivory);
+}

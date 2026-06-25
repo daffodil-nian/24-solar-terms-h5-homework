@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="二十四节气 · 观象授时 · 节气智能体">
+		<title>二十四节气</title>
+		<link href="../lib/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+		<link href="../css/modern.css" rel="stylesheet">
+		<link href="../css/aurora.css" rel="stylesheet">
+		<link href="../css/home-premium.css" rel="stylesheet">
+		<link href="../css/ai-agent.css" rel="stylesheet">
+		<link href="../css/home-seasonal.css" rel="stylesheet">
+		<link href="../css/site-bgm.css" rel="stylesheet">
+		<link href="../css/responsive.css" rel="stylesheet">
+		<link href="../css/site-loader.css" rel="stylesheet">
+	</head>
+	<body class="home-page is-loading">
+		<div id="siteLoader" class="site-loader" role="status" aria-live="polite" aria-label="页面加载中">
+			<div class="site-loader-inner">
+				<div class="site-loader-icon-wrap"> <img src="../images/icon/icon.png" alt="" class="site-loader-icon"
+						id="siteLoaderIcon" width="72" height="72"> <span class="site-loader-icon-fallback"
+						id="siteLoaderIconFallback" style="display:none" aria-hidden="true">节</span> </div>
+				<p class="site-loader-title">二十四节气</p>
+				<div class="progress site-loader-progress" aria-hidden="true">
+					<div class="progress-bar" id="siteLoaderBar" role="progressbar" style="width: 0%" aria-valuenow="0"
+						aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+				<p class="site-loader-percent" id="siteLoaderPercent">0%</p>
+			</div>
+		</div>
+		<div id="scrollProgress" class="scroll-progress-bar"></div>
+		<nav class="navbar navbar-expand-lg navbar-light film-nav fixed-top">
+			<div class="container"> <a class="navbar-brand page-link-transition" href="index.html">二十四节气</a> <button
+					class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+					aria-controls="mainNav" aria-expanded="false" aria-label="切换导航"> <span
+						class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link active page-link-transition" href="index.html">首页</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="knowledge.html">节气知识</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="customs.html">民俗美食</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="poetry.html">诗词书画</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="health.html">时令养生</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="calendar.html">节气日历</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="challenge.html">知识挑战</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition"
+								href="culture-library.html">文化联动库</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="games.html">游戏</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="heritage.html">四时之约</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section class="home-premium" id="hero">
+			<div id="aurora" class="aurora-hero" aria-hidden="true">
+				<div class="aurora-blob aurora-blob-1"></div>
+				<div class="aurora-blob aurora-blob-2"></div>
+				<div class="aurora-blob aurora-blob-3"></div>
+			</div>
+			<div class="aurora-fade" aria-hidden="true"></div>
+			<div class="container home-premium-content">
+				<div class="row g-4 g-xl-5 align-items-stretch">
+					<div class="col-lg-5">
+						<p class="home-premium-tag">Solar Terms · 观象授时</p>
+						<h1 class="home-premium-title">二十四节气</h1>
+						<p class="home-premium-desc">以时间为经、物候为纬。在克制与留白之间，呈现中华历法的当代质感——科技可感，人文可触。</p>
+						<div class="home-today-chip" id="todayTermChip"> <span class="home-today-dot"
+								aria-hidden="true"></span> <strong id="todayTermName">—</strong> <span
+								id="todayTermMeta">载入中…</span> </div>
+						<div class="home-premium-stats">
+							<div class="home-premium-stat"><strong class="count-up"
+									data-target="24">0</strong><span>节气</span></div>
+							<div class="home-premium-stat"><strong class="count-up"
+									data-target="4">0</strong><span>季节</span></div>
+							<div class="home-premium-stat"><strong class="count-up"
+									data-target="3000">0</strong><span>年</span></div>
+						</div>
+						<div class="home-premium-actions"> <a href="calendar.html"
+								class="btn btn-premium btn-premium-solid page-link-transition">节气日历</a> <a
+								href="knowledge.html"
+								class="btn btn-premium btn-premium-ghost page-link-transition">走进文化</a> </div>
+						<!-- 夏至 · 倒计时芯片（不动原结构，叠加在下方） -->
+						<div class="home-season-countdown" id="seasonCountdown"> <span
+								class="season-countdown-label">下一节气</span> <strong class="season-countdown-next"
+								id="countdownNextName">—</strong> <span class="season-countdown-days"
+								id="countdownDays"></span> </div>
+						<div class="ai-agent-teaser">
+							<div class="ai-agent-teaser-head"> <span class="ai-agent-teaser-icon"
+									aria-hidden="true">✦</span>
+								<p class="ai-agent-teaser-title">节气智能体</p> <span class="ai-agent-teaser-badge">AI</span>
+							</div>
+							<form class="ai-agent-teaser-form" id="aiAgentTeaserForm"> <input type="text"
+									placeholder="今日适合做什么？" autocomplete="off" aria-label="向节气智能体提问"> <button
+									type="submit">提问</button> </form>
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<div id="heroCarousel" class="carousel slide home-premium-carousel" data-bs-ride="carousel"
+							data-bs-interval="5500">
+							<div class="carousel-indicators"> <button type="button" data-bs-target="#heroCarousel"
+									data-bs-slide-to="0" class="active" aria-label="立春"></button> <button type="button"
+									data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="夏至"></button>
+								<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
+									aria-label="秋分"></button> <button type="button" data-bs-target="#heroCarousel"
+									data-bs-slide-to="3" aria-label="冬至"></button> </div>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="home-carousel-visual home-carousel-visual--spring"> <img
+											src="../images/terms/lichun.png" alt="立春 · 万物起始" class="home-carousel-img">
+									</div>
+									<div class="home-carousel-caption"> <span class="home-carousel-season">Spring</span>
+										<h3>立春 · 万物起始</h3>
+										<p>东风解冻，新的轮回从此开启。</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="home-carousel-visual home-carousel-visual--summer"> <img
+											src="../images/terms/xiazhi.png" alt="夏至 · 日长之至" class="home-carousel-img">
+									</div>
+									<div class="home-carousel-caption"> <span class="home-carousel-season">Summer</span>
+										<h3>夏至 · 日长之至</h3>
+										<p>阳气极盛，万物繁茂。</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="home-carousel-visual home-carousel-visual--autumn"> <img
+											src="../images/terms/qiufen.png" alt="秋分 · 昼夜平分" class="home-carousel-img">
+									</div>
+									<div class="home-carousel-caption"> <span class="home-carousel-season">Autumn</span>
+										<h3>秋分 · 昼夜平分</h3>
+										<p>天地平衡，收获与感恩。</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="home-carousel-visual home-carousel-visual--winter"> <img
+											src="../images/terms/dongzhi.png" alt="冬至 · 一阳初生" class="home-carousel-img">
+									</div>
+									<div class="home-carousel-caption"> <span class="home-carousel-season">Winter</span>
+										<h3>冬至 · 一阳初生</h3>
+										<p>否极泰来，人间小团圆。</p>
+									</div>
+								</div>
+							</div> <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+								data-bs-slide="prev"> <span class="carousel-control-prev-icon"
+									aria-hidden="true"></span> <span class="visually-hidden">上一张</span> </button>
+							<button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+								data-bs-slide="next"> <span class="carousel-control-next-icon"
+									aria-hidden="true"></span> <span class="visually-hidden">下一张</span> </button>
+						</div>
+					</div>
+				</div>
+				<div class="home-premium-nav">
+					<div class="home-premium-nav-head">
+						<h2>Explore</h2> <a href="knowledge.html" class="page-link-transition">全部栏目</a>
+					</div>
+					<div class="row g-2 g-md-3 home-premium-nav-grid">
+						<div class="col-6 col-md-4 col-lg-3"> <a href="knowledge.html"
+								class="home-premium-link home-premium-link--knowledge page-link-transition"> <span
+									class="home-premium-link-watermark" aria-hidden="true">知</span> <span
+									class="home-premium-link-icon">知</span>
+								<div class="home-premium-link-body">
+									<h3>节气知识</h3>
+									<p class="home-premium-link-desc">历法源流</p>
+								</div>
+							</a> </div>
+						<div class="col-6 col-md-4 col-lg-3"> <a href="customs.html"
+								class="home-premium-link home-premium-link--customs page-link-transition"> <span
+									class="home-premium-link-watermark" aria-hidden="true">俗</span> <span
+									class="home-premium-link-icon">俗</span>
+								<div class="home-premium-link-body">
+									<h3>民俗美食</h3>
+									<p class="home-premium-link-desc">节令食俗</p>
+								</div>
+							</a> </div>
+						<div class="col-6 col-md-4 col-lg-3"> <a href="poetry.html"
+								class="home-premium-link home-premium-link--poetry page-link-transition"> <span
+									class="home-premium-link-watermark" aria-hidden="true">诗</span> <span
+									class="home-premium-link-icon">诗</span>
+								<div class="home-premium-link-body">
+									<h3>诗词书画</h3>
+									<p class="home-premium-link-desc">文人意趣</p>
+								</div>
+							</a> </div>
+						<div class="col-6 col-md-4 col-lg-3"> <a href="health.html"
+								class="home-premium-link home-premium-link--health page-link-transition"> <span
+									class="home-premium-link-watermark" aria-hidden="true">养</span> <span
+									class="home-premium-link-icon">养</span>
+								<div class="home-premium-link-body">
+									<h3>时令养生</h3>
+									<p class="home-premium-link-desc">顺时调养</p>
+								</div>
+							</a> </div>
+						<div class="col-6 col-md-4 col-lg-3"> <a href="calendar.html"
+								class="home-premium-link home-premium-link--calendar page-link-transition"> <span
+									class="home-premium-link-watermark" aria-hidden="true">历</span> <span
+									class="home-premium-link-icon">历</span>
+								<div class="home-premium-link-body">
+									<h3>节气日历</h3>
+									<p class="home-premium-link-desc">岁时流转</p>
+								</div>
+							</a> </div>
+						<div class="col-6 col-md-4 col-lg-3"> <a href="challenge.html"
+								class="home-premium-link home-premium-link--challenge page-link-transition"> <span
+									class="home-premium-link-watermark" aria-hidden="true">战</span> <span
+									class="home-premium-link-icon">战</span>
+								<div class="home-premium-link-body">
+									<h3>知识挑战</h3>
+									<p class="home-premium-link-desc">闯关答题</p>
+								</div>
+							</a> </div>
+						<div class="col-6 col-md-4 col-lg-3"> <a href="culture-library.html"
+								class="home-premium-link home-premium-link--culture page-link-transition"> <span
+									class="home-premium-link-watermark" aria-hidden="true">库</span> <span
+									class="home-premium-link-icon">库</span>
+								<div class="home-premium-link-body">
+									<h3>文化联动库</h3>
+									<p class="home-premium-link-desc">影视典籍</p>
+								</div>
+							</a> </div>
+						<div class="col-6 col-md-4 col-lg-3"><a href="games.html"
+								class="home-premium-link home-premium-link--game page-link-transition"><span
+									class="home-premium-link-watermark" aria-hidden="true">游</span><span
+									class="home-premium-link-icon">游</span>
+								<div class="home-premium-link-body">
+									<h3>节气游戏</h3>
+									<p class="home-premium-link-desc">贪吃蛇闯关</p>
+								</div>
+							</a></div>
+						<div class="col-6 col-md-4 col-lg-3"> <a href="heritage.html"
+								class="home-premium-link home-premium-link--heritage page-link-transition"> <span
+									class="home-premium-link-watermark" aria-hidden="true">约</span> <span
+									class="home-premium-link-icon">约</span>
+								<div class="home-premium-link-body">
+									<h3>四时之约</h3>
+									<p class="home-premium-link-desc">节气文脉</p>
+								</div>
+							</a> </div>
+					</div>
+				</div> <!-- 时令诗词（随当前节气更新） -->
+				<div class="home-poetry-banner">
+					<div class="home-poetry-inner row align-items-center">
+						<div class="col-md-auto">
+							<div class="home-poetry-verse" id="homePoetryVerse">—</div>
+						</div>
+						<div class="col-md">
+							<div class="poetry-term-label" id="poetryTermLabel">—</div>
+							<div class="poetry-author text-muted" id="poetryAuthor"></div>
+							<p class="poetry-meaning mt-2" id="poetryMeaning"></p>
+						</div>
+					</div>
+				</div> <!-- 三候物候（随当前节气更新） -->
+				<div class="home-phenology-section">
+					<div class="home-phenology-head d-flex align-items-baseline gap-2 mb-3"> <small
+							class="text-uppercase text-muted fw-semibold">Phenology</small> <span
+							class="fw-bold text-dark" id="phenologyTitle">—三候</span> </div>
+					<div class="row g-3" id="phenologyRow"></div>
+				</div>
+				<div class="home-term-strip-section">
+					<div class="home-term-strip-head">
+						<h2>24 Solar Terms</h2>
+						<div class="btn-group season-pills" role="group" aria-label="季节筛选"> <button type="button"
+								class="btn filter-btn active" data-season="all">全部</button> <button type="button"
+								class="btn filter-btn" data-season="spring">春</button> <button type="button"
+								class="btn filter-btn" data-season="summer">夏</button> <button type="button"
+								class="btn filter-btn" data-season="autumn">秋</button> <button type="button"
+								class="btn filter-btn" data-season="winter">冬</button> </div>
+					</div>
+					<div class="term-strip-scroll" id="termStrip" role="list"></div>
+				</div> <!-- 页脚前过渡语 -->
+				<div class="home-connect-section reveal">
+					<div class="home-connect-head">
+						<p class="home-connect-eyebrow">Connect</p>
+						<h2>与我联系 · 让网站更好</h2>
+						<p class="home-connect-intro">如果你在使用中有想法、发现了问题，或希望增加新功能，欢迎通过下方渠道找到我，或直接写一封信告诉我你的需求。</p>
+					</div>
+					<div class="row g-3 g-lg-4 align-items-stretch">
+						<div class="col-md-4">
+							<div class="home-connect-cards"> <a href="https://daffodil-nian.github.io/"
+									class="home-connect-card" id="connectBlog" target="_blank"
+									rel="noopener noreferrer"> <span class="home-connect-card-icon"
+										aria-hidden="true">文</span> <strong id="connectBlogLabel">我的博客</strong> <small
+										id="connectBlogDesc">节气随笔与设计笔记</small> </a> <a href="#"
+									class="home-connect-card home-connect-card--bili" id="connectBilibili"
+									target="_blank" rel="noopener noreferrer"> <span class="home-connect-card-icon"
+										aria-hidden="true">B</span> <strong id="connectBiliLabel">B站主页</strong> <small
+										id="connectBiliDesc">@你的B站昵称</small> </a> <a href="mailto:hello@example.com"
+									class="home-connect-card home-connect-card--mail" id="connectEmail"> <span
+										class="home-connect-card-icon" aria-hidden="true">✉</span> <strong>发送邮件</strong>
+									<small id="connectEmailAddr">hello@example.com</small> </a> </div>
+						</div>
+						<div class="col-md-8">
+							<form class="home-connect-letter" id="connectLetterForm">
+								<p class="home-connect-letter-title">写信给我</p>
+								<div class="row g-2">
+									<div class="col-sm-6"> <label class="home-connect-label"
+											for="letterName">称呼（必填）</label> <input type="text"
+											class="home-connect-input" id="letterName" placeholder="怎么称呼你"
+											autocomplete="name" required> </div>
+									<div class="col-sm-6"> <label class="home-connect-label"
+											for="letterContact">联系方式（必填）</label> <input type="text"
+											class="home-connect-input" id="letterContact" placeholder="邮箱 / 微信 / QQ"
+											autocomplete="email" required> </div>
+									<div class="col-12"> <label class="home-connect-label"
+											for="letterMessage">你的想法与需求（必填，至少四个字）</label> <textarea
+											class="home-connect-textarea" id="letterMessage" rows="4"
+											placeholder="例如：希望增加某个节气的内容、页面哪里需要改进、想要的新功能……" required
+											minlength="4"></textarea> </div>
+									<div class="col-12 d-flex flex-wrap align-items-center gap-3"> <button type="submit"
+											class="home-connect-submit">寄出这封信</button>
+										<p class="home-connect-status mb-0" id="connectLetterStatus" aria-live="polite">
+											我会认真阅读每一封来信。</p>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="home-seasonal-saying text-center mt-5 pt-4">
+					<p class="fst-italic text-secondary" id="seasonalSayingText"></p> <small class="text-muted"
+						id="seasonalSayingSource"></small>
+				</div>
+			</div>
+		</section>
+		<footer class="film-footer">
+			<div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+				<p class="mb-0">二十四节气 · 观象授时</p>
+				<div class="footer-links mb-0"> <a href="knowledge.html" class="page-link-transition">知识</a> <a
+						href="customs.html" class="page-link-transition">民俗</a> <a href="calendar.html"
+						class="page-link-transition">日历</a> </div>
+			</div>
+		</footer>
+		<div class="modal fade term-modal" id="termModal" tabindex="-1" aria-labelledby="termModalTitle"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="termModalTitle"></h5> <button type="button" class="btn-close"
+							data-bs-dismiss="modal" aria-label="关闭"></button>
+					</div>
+					<div class="modal-body">
+						<figure class="home-term-modal-figure d-none" id="termModalFigure"> <img id="termModalImg"
+								src="" alt=""> </figure>
+						<div id="termModalBody"></div>
+					</div>
+					<div class="modal-footer"> <button type="button" class="btn btn-film"
+							data-bs-dismiss="modal">关闭</button> </div>
+				</div>
+			</div>
+		</div> <button type="button" class="ai-agent-fab" id="aiAgentFab" aria-label="打开节气智能体">✦</button>
+		<div class="ai-agent-panel" id="aiAgentPanel" role="dialog" aria-label="节气智能体对话">
+			<div class="ai-agent-panel-header">
+				<h3>节气智能体</h3> <button type="button" class="ai-agent-panel-close" id="aiAgentClose"
+					aria-label="关闭">×</button>
+			</div>
+			<div class="ai-agent-messages" id="aiAgentMessages"></div>
+			<form class="ai-agent-panel-form" id="aiAgentPanelForm"> <input type="text" placeholder="输入节气相关问题…"
+					autocomplete="off" aria-label="消息"> <button type="submit">发送</button> </form>
+			<p class="ai-agent-panel-hint" id="aiAgentPanelHint">演示模式 · 配置 js/ai-agent-config.js 后连接百炼</p>
+		</div>
+		<script src="../lib/jquery.min.js"></script>
+		<script src="../lib/bootstrap.bundle.min.js"></script>
+		<script src="../js/site-loader.js"></script>
+		<script src="../js/terms-seasonal-content.js"></script>
+		<script src="../js/terms-data.js"></script>
+		<script src="../js/term-slugs.js"></script>
+		<script src="../js/term-images.js"></script>
+		<script src="../js/ai-agent-config.js"></script>
+		<script src="../js/ai-agent.js"></script>
+		<script src="../js/index.js"></script>
+		<script src="../js/site-contact-config.js"></script>
+		<script src="../js/site-contact.js"></script>
+		<script src="../js/site-bgm-config.js"></script>
+		<script src="../js/site-bgm.js"></script>
+		<script src="../js/scroll.js"></script>
+	</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="二十四节气 · 诗词书画 · 古朴典雅">
+		<title>二十四节气 · 诗词书画</title>
+		<link href="../lib/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+		<link href="../css/modern.css" rel="stylesheet">
+		<link href="../css/poetry.css" rel="stylesheet">
+		<link href="../css/animate.css" rel="stylesheet">
+		<link href="../css/site-bgm.css" rel="stylesheet">
+		<link href="../css/responsive.css" rel="stylesheet">
+	</head>
+	<body class="poetry-page page-enter">
+		<div id="scrollProgress" class="scroll-progress-bar"></div>
+		<div id="seasonParticles" data-season="spring"></div>
+		<nav class="navbar navbar-expand-lg navbar-light film-nav fixed-top">
+			<div class="container">
+				<a class="navbar-brand page-link-transition" href="index.html">二十四节气</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link page-link-transition" href="index.html">首页</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="knowledge.html">节气知识</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="customs.html">民俗美食</a></li>
+						<li class="nav-item"><a class="nav-link active page-link-transition" href="poetry.html">诗词书画</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="health.html">时令养生</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="calendar.html">节气日历</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="challenge.html">知识挑战</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition"
+								href="culture-library.html">文化联动库</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="games.html">游戏</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="heritage.html">四时之约</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section class="poetry-hero">
+			<div class="poetry-hero-bg"></div>
+			<div class="poetry-hero-scroll"></div>
+			<div class="poetry-hero-content fade-in-slow">
+				<p class="hero-subtitle subtitle-line">POETRY &amp; ART</p>
+				<h1 class="hero-title subtitle-line">诗词书画</h1>
+				<p class="hero-desc subtitle-line">语文课本般的古朴典雅，蓝绿雾感里见节气。点击任一节气，进入专属诗卷——每页皆有独立导航与风物意境。</p>
+			</div>
+		</section>
+		<section class="poetry-section">
+			<div class="container">
+				<p class="section-label-center reveal">TERM POETRY</p>
+				<h2 class="section-title-center reveal reveal-delay-1">廿四节气 · 诗卷导航</h2>
+				<p class="text-center reveal reveal-delay-1 mb-4"
+					style="color:#5a8a98;max-width:680px;margin-left:auto;margin-right:auto;line-height:2;">
+					立春梅白、雨水幽兰、惊蛰桃杏、春分辛夷——每个节气皆有专属色调与背景意境，如翻阅一部流动的节气语文读本。</p>
+				<div class="poetry-book-draw reveal reveal-delay-1 mb-5" id="poetryBookDraw">
+					<div class="poetry-book-draw-panel">
+						<div class="poetry-book-draw-visual">
+							<div class="poetry-book-draw-table" aria-hidden="true"></div>
+							<div class="poetry-book-stack" id="poetryBookStack" aria-hidden="true">
+								<div class="poetry-book-spine poetry-book-spine--spring" style="--i:0"><span>楚辞</span>
+								</div>
+								<div class="poetry-book-spine poetry-book-spine--summer" style="--i:1"><span>全唐诗</span>
+								</div>
+								<div class="poetry-book-spine poetry-book-spine--autumn" style="--i:2"><span>宋词选</span>
+								</div>
+								<div class="poetry-book-spine poetry-book-spine--winter" style="--i:3"><span>元曲钞</span>
+								</div>
+								<div class="poetry-book-spine poetry-book-spine--spring" style="--i:4"><span>节序录</span>
+								</div>
+							</div>
+							<div class="poetry-book-float" id="poetryBookFloat" hidden>
+								<div class="poetry-book-float-cover" id="poetryBookFloatCover">
+									<div class="poetry-book-float-thumb"> <img id="poetryBookFloatImg" src="" alt="">
+									</div>
+									<div class="poetry-book-float-text"> <span class="poetry-book-float-season"
+											id="poetryBookFloatSeason">春</span> <strong class="poetry-book-float-name"
+											id="poetryBookFloatName">—</strong>
+										<p class="poetry-book-float-desc" id="poetryBookFloatDesc"></p>
+										<p class="poetry-book-float-verse" id="poetryBookFloatVerse"></p>
+									</div> <span class="poetry-book-float-seal">诗卷</span>
+								</div>
+							</div>
+						</div>
+						<div class="poetry-book-draw-ui">
+							<p class="poetry-book-draw-eyebrow">Random Scroll</p>
+							<h3 class="poetry-book-draw-heading">典籍抽诗</h3>
+							<p class="poetry-book-draw-intro">线装古卷悬于案上，随手抽得一册，便入该节气诗境。抽中后自动展卷，亦可点击浮起的书卷即刻前往。</p> <button
+								type="button" class="poetry-book-draw-btn" id="poetryBookDrawBtn">抽一卷</button>
+							<p class="poetry-book-draw-status" id="poetryBookDrawStatus" aria-live="polite">悬而未决，待君一抽。
+							</p> <a href="#" class="poetry-book-draw-link d-none page-link-transition"
+								id="poetryBookDrawLink">展卷阅读 →</a>
+						</div>
+					</div>
+				</div>
+				<div class="poetry-term-grid reveal reveal-delay-2 mb-5" id="poetryTermGrid"></div>
+				<div class="quote-block breathe-light reveal text-center mb-5">
+					<blockquote>春雨惊春清谷天，夏满芒夏暑相连。秋处露秋寒霜降，冬雪雪冬小大寒。</blockquote> <cite>—— 节气歌</cite>
+				</div>
+				<ul class="nav nav-pills justify-content-center mb-4 reveal" id="poemTabs" role="tablist">
+					<li class="nav-item"><button class="nav-link active" data-bs-toggle="pill"
+							data-bs-target="#poemSpring">春</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
+							data-bs-target="#poemSummer">夏</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
+							data-bs-target="#poemAutumn">秋</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
+							data-bs-target="#poemWinter">冬</button></li>
+				</ul>
+				<div class="tab-content reveal reveal-delay-1">
+					<div class="tab-pane fade show active" id="poemSpring">
+						<div class="poem-block">
+							<p class="poem-text">律回岁晚冰霜少，春到人间草木知。</p>
+							<p class="poem-meta">张栻《立春偶成》· <a href="terms/lichun.html#poetry"
+									class="page-link-transition">进入立春专题</a></p>
+						</div>
+						<div class="poem-block poem-block--visual"> <img src="../images/terms/orchid-rain.svg"
+								alt="雨水 · 雨中幽兰" class="poem-block-art" loading="lazy" width="200" height="160">
+							<div class="poem-block-body">
+								<p class="poem-text">好雨知时节，当春乃发生。<br>随风潜入夜，润物细无声。</p>
+								<p class="poem-meta">杜甫《春夜喜雨》· <a href="terms/yushui.html#poetry"
+										class="page-link-transition">进入雨水专题</a></p>
+							</div>
+						</div>
+						<div class="poem-block">
+							<p class="poem-text">竹外桃花三两枝，春江水暖鸭先知。</p>
+							<p class="poem-meta">苏轼《惠崇春江晚景》· <a href="terms/jingzhe.html#poetry"
+									class="page-link-transition">进入惊蛰专题</a></p>
+						</div>
+						<div class="poem-block">
+							<p class="poem-text">春分时节，莺飞草长，辛夷如火，海棠依旧。</p>
+							<p class="poem-meta">节令记游 · <a href="terms/chunfen.html#poetry"
+									class="page-link-transition">进入春分专题</a></p>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="poemSummer">
+						<div class="poem-block">
+							<p class="poem-text">小荷才露尖尖角，早有蜻蜓立上头。</p>
+							<p class="poem-meta">杨万里《小池》· 小满/芒种</p>
+						</div>
+						<div class="poem-block">
+							<p class="poem-text">接天莲叶无穷碧，映日荷花别样红。</p>
+							<p class="poem-meta">杨万里《晓出净慈寺送林子方》· 夏至/小暑</p>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="poemAutumn">
+						<div class="poem-block">
+							<p class="poem-text">空山新雨后，天气晚来秋。</p>
+							<p class="poem-meta">王维《山居秋暝》· 立秋/白露</p>
+						</div>
+						<div class="poem-block">
+							<p class="poem-text">自古逢秋悲寂寥，我言秋日胜春朝。</p>
+							<p class="poem-meta">刘禹锡《秋词》· 秋分</p>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="poemWinter">
+						<div class="poem-block">
+							<p class="poem-text">千山鸟飞绝，万径人踪灭。</p>
+							<p class="poem-meta">柳宗元《江雪》· 大雪/冬至</p>
+						</div>
+						<div class="poem-block">
+							<p class="poem-text">天时人事日相催，冬至阳生春又来。</p>
+							<p class="poem-meta">杜甫《小至》· 冬至</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="poetry-section section-compact-top">
+			<div class="container">
+				<p class="section-label-center reveal">ART</p>
+				<h2 class="section-title-center reveal reveal-delay-1">节气与书画</h2>
+				<div class="row g-4 reveal reveal-delay-2">
+					<div class="col-md-4">
+						<div class="content-card content-card--visual"><img src="../images/terms/orchid-rain.svg"
+								alt="雨水 · 幽兰" class="content-card-art" loading="lazy" width="320" height="200">
+							<div class="card-tag">雨水 · 幽兰</div>
+							<h3>《碣石调·幽兰》</h3>
+							<p>现存最古老古琴谱，歌颂兰花高洁。与雨水节气的「润物无声」相映成趣。</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="content-card">
+							<div class="card-tag">春分 · 辛夷</div>
+							<h3>玉兰与海棠</h3>
+							<p>辛夷如火、海棠依旧，是春分前后文人画中最常见的春景题材。</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="content-card">
+							<div class="card-tag">宋 · 画院</div>
+							<h3>四季花鸟</h3>
+							<p>宋代院体画按节序写花鸟虫鱼，以画记时，如翻阅一部视觉化的语文课本。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="film-footer">
+			<div class="container">
+				<div class="footer-links mb-3"> <a href="customs.html" class="page-link-transition">民俗美食</a> <a
+						href="terms/yushui.html" class="page-link-transition">雨水专题</a> <a href="terms/chunfen.html"
+						class="page-link-transition">春分专题</a> </div>
+				<p class="mb-0">二十四节气 · 观象授时</p>
+			</div>
+		</footer>
+		<script src="../lib/jquery.min.js"></script>
+		<script src="../lib/bootstrap.bundle.min.js"></script>
+		<script src="../js/terms-seasonal-content.js"></script>
+		<script src="../js/terms-data.js"></script>
+		<script src="../js/term-slugs.js"></script>
+		<script src="../js/term-images.js"></script>
+		<script src="../js/poetry-draw.js"></script>
+		<script src="../js/scroll.js"></script>
+		<script src="../js/site-common.js"></script>
+		<script src="../js/term-grid.js"></script> <audio id="siteBgm" preload="auto"></audio> <button type="button"
+			id="siteBgmToggle" class="site-bgm-btn" aria-label="背景音乐">♫</button>
+		<script src="../js/site-bgm-config.js"></script>
+		<script src="../js/site-bgm.js"></script>
+	</body>
+</html>

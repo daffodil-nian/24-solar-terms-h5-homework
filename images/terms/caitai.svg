@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#e8f5e0"/>
+  <rect x="0" y="220" width="400" height="80" fill="#c8dcc0"/>
+  <path d="M120 220 Q130 120 145 80 Q155 140 150 220" fill="#6a9858" stroke="#4a7840" stroke-width="2"/>
+  <path d="M145 80 Q160 60 175 75 Q165 90 145 80" fill="#7aab68"/>
+  <ellipse cx="145" cy="75" rx="8" ry="5" fill="#d87898"/>
+  <path d="M200 220 Q205 100 210 60 Q220 130 215 220" fill="#5a8848"/>
+  <path d="M260 220 Q270 130 280 90 Q290 150 285 220" fill="#6a9858"/>
+  <ellipse cx="280" cy="85" rx="7" ry="4" fill="#e888a8"/>
+  <text x="200" y="285" text-anchor="middle" font-family="KaiTi,serif" font-size="18" fill="#4a6840">菜薹 · 立春咬春</text>
+</svg>

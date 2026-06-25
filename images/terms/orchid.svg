@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#eef8f4"/>
+  <path d="M200 240 L200 120" stroke="#5a8868" stroke-width="3"/>
+  <path d="M200 140 Q160 120 140 150 Q170 145 200 140" fill="#7ab888" stroke="#5a8868"/>
+  <path d="M200 130 Q240 110 260 140 Q230 135 200 130" fill="#8ac898"/>
+  <path d="M200 160 Q150 150 130 180 Q170 170 200 160" fill="#7ab888"/>
+  <path d="M200 155 Q250 145 270 175 Q230 165 200 155" fill="#8ac898"/>
+  <ellipse cx="200" cy="110" rx="12" ry="18" fill="#c8e8d0" stroke="#7ab888"/>
+  <ellipse cx="185" cy="105" rx="8" ry="12" fill="#d8f0e0"/>
+  <ellipse cx="215" cy="105" rx="8" ry="12" fill="#d8f0e0"/>
+  <text x="200" y="275" text-anchor="middle" font-family="KaiTi,serif" font-size="18" fill="#3a6858">兰花 · 雨水幽芳</text>
+</svg>

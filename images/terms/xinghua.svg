@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#fff5f0"/>
+  <path d="M160 220 Q170 140 180 100 Q190 160 185 220" stroke="#8a5848" stroke-width="2" fill="none"/>
+  <circle cx="180" cy="95" r="18" fill="#f0a090" opacity="0.8"/>
+  <circle cx="175" cy="90" r="8" fill="#f8c0b0"/>
+  <path d="M240 220 Q250 130 260 90 Q270 150 265 220" stroke="#8a5848" stroke-width="2" fill="none"/>
+  <circle cx="260" cy="85" r="16" fill="#f0a090" opacity="0.75"/>
+  <circle cx="255" cy="80" r="7" fill="#f8c0b0"/>
+  <text x="200" y="270" text-anchor="middle" font-family="KaiTi,serif" font-size="18" fill="#a85848">杏花 · 惊蛰花信</text>
+</svg>

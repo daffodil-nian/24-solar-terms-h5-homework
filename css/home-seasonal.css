@@ -1,0 +1,245 @@
+/* 首页 · 时令增强层（与 main.css 配色一致） */
+
+.home-season-countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(238, 250, 250, 0.85));
+  border: 1px solid rgba(42, 144, 144, 0.2);
+  border-radius: 0;
+  margin-bottom: 1rem;
+  font-size: 0.78rem;
+  transition: border-color 0.35s, box-shadow 0.35s, transform 0.25s;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(42, 120, 140, 0.06);
+}
+
+.home-season-countdown::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent-light), var(--accent));
+}
+
+.home-season-countdown:hover {
+  border-color: var(--accent-light);
+  box-shadow: 0 4px 20px rgba(42, 144, 144, 0.12);
+  transform: translateY(-1px);
+}
+
+.season-countdown-label {
+  font-family: var(--font-sub);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.season-countdown-next {
+  color: var(--ocean-deep-text);
+  font-weight: 600;
+}
+
+.season-countdown-days {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.home-today-chip {
+  transition: box-shadow 0.35s ease, transform 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-today-chip::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent-light), var(--accent));
+}
+
+.home-today-chip:hover {
+  box-shadow: 0 6px 22px rgba(42, 144, 144, 0.12);
+  transform: translateY(-1px);
+}
+
+.home-poetry-banner {
+  margin-top: 1.75rem;
+  padding: 1.5rem 1.25rem;
+  border: 1px solid var(--home-line, rgba(42, 144, 144, 0.12));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(238, 250, 250, 0.6));
+  box-shadow: 0 4px 24px rgba(42, 120, 140, 0.06);
+  position: relative;
+}
+
+.home-poetry-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 1.25rem;
+  right: 1.25rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-light), transparent);
+}
+
+.home-poetry-verse {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  color: var(--ocean-deep-text);
+  letter-spacing: 0.14em;
+  padding: 0.25rem 0;
+  border-left: 2px solid var(--accent-light);
+  line-height: 2.6;
+  max-height: 200px;
+}
+
+.poetry-term-label {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: var(--ocean-deep-text);
+  letter-spacing: 0.12em;
+}
+
+.poetry-author {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+
+.poetry-meaning {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  max-width: 32em;
+}
+
+/* 三候物候卡 */
+.phenology-card {
+  border-radius: 0 !important;
+  border: 1px solid rgba(42, 144, 144, 0.15) !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(238, 250, 250, 0.8)) !important;
+  box-shadow: 0 4px 20px rgba(42, 120, 140, 0.07) !important;
+}
+
+.phenology-card .card-body {
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  gap: 0;
+}
+
+.phenology-rail {
+  flex: 0 0 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 1rem 0.5rem;
+  background: linear-gradient(180deg, rgba(94, 196, 212, 0.2), rgba(42, 144, 144, 0.12));
+  border-right: 1px solid rgba(42, 144, 144, 0.12);
+}
+
+.phenology-order {
+  font-family: var(--font-sub);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.phenology-content {
+  flex: 1;
+  padding: 1rem 1.1rem;
+  text-align: left;
+}
+
+.phenology-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(42, 120, 140, 0.14) !important;
+}
+
+.phenology-card .card-title {
+  font-family: var(--font-title);
+  color: var(--ocean-deep-text);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
+
+.phenology-card .card-text {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.phenology-card .phenology-icon {
+  font-family: var(--font-title);
+  font-size: 1.75rem;
+  color: var(--ocean-deep-text);
+  line-height: 1;
+}
+
+.home-seasonal-saying {
+  position: relative;
+}
+
+.home-seasonal-saying::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-light), transparent);
+  margin: 0 auto 1.5rem;
+}
+
+.home-seasonal-saying p {
+  font-family: var(--font-title);
+}
+
+@media (max-width: 767.98px) {
+  .home-poetry-verse {
+    writing-mode: horizontal-tb;
+    max-height: none;
+    font-size: 1.15rem;
+    border-left: none;
+    border-bottom: 1px solid rgba(42, 144, 144, 0.15);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 2;
+  }
+
+  .phenology-rail {
+    flex: 0 0 3.5rem;
+  }
+
+  .phenology-card .phenology-icon {
+    font-size: 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-today-chip {
+    animation: none;
+  }
+
+  .home-premium-link:hover,
+  .term-strip-card:hover,
+  .term-strip-chip:hover,
+  .phenology-card:hover,
+  .home-season-countdown:hover,
+  .home-today-chip:hover {
+    transform: none;
+  }
+}

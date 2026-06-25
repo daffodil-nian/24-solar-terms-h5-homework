@@ -1,0 +1,396 @@
+/* 节气知识页 */
+
+.knowledge-spotlight {
+  display: grid;
+  grid-template-columns: 1fr minmax(140px, 200px) 1.2fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(238, 250, 250, 0.85));
+  border: 1px solid rgba(42, 144, 144, 0.15);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  align-items: start;
+}
+
+.knowledge-spotlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light), transparent);
+}
+
+.knowledge-spotlight-main {
+  position: relative;
+}
+
+.knowledge-spotlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sub);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.knowledge-spotlight-badge::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.knowledge-spotlight-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--ocean-deep-text);
+  letter-spacing: 0.1em;
+  margin: 0 0 0.25rem;
+}
+
+.knowledge-spotlight-meta {
+  font-family: var(--font-sub);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.knowledge-spotlight-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.knowledge-spotlight-next {
+  font-family: var(--font-sub);
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.knowledge-spotlight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.knowledge-spotlight-figure {
+  margin: 0;
+}
+
+.knowledge-spotlight-figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid rgba(42, 144, 144, 0.12);
+  box-shadow: 0 4px 16px rgba(42, 120, 140, 0.08);
+  background: rgba(238, 250, 250, 0.6);
+}
+
+.knowledge-spotlight-figure figcaption {
+  margin-top: 0.45rem;
+  font-family: var(--font-sub);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.knowledge-spotlight-aside {
+  min-width: 0;
+}
+
+.knowledge-spotlight-poetry {
+  padding: 1.25rem 1rem;
+  border-left: 2px solid var(--accent-light);
+  background: rgba(255, 255, 255, 0.55);
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  line-height: 2;
+  color: var(--ocean-deep-text);
+  letter-spacing: 0.08em;
+}
+
+.knowledge-spotlight-detail {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-top: 0.75rem;
+}
+
+.knowledge-terms-section {
+  padding-top: 0;
+}
+
+.knowledge-term-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(238, 250, 250, 0.8));
+  border: 1px solid rgba(42, 144, 144, 0.12);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.knowledge-term-card-thumb {
+  position: relative;
+  width: 100%;
+  height: 5.5rem;
+  overflow: hidden;
+  background: rgba(238, 250, 250, 0.85);
+}
+
+.knowledge-term-card-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.knowledge-term-card:hover .knowledge-term-card-thumb img {
+  transform: scale(1.04);
+}
+
+.knowledge-term-card-body {
+  padding: 0.75rem 0.9rem 1rem;
+}
+
+.knowledge-term-card.is-current .knowledge-term-card-thumb {
+  height: 6.25rem;
+}
+
+.knowledge-term-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--term-accent, var(--accent-light));
+  opacity: 0.7;
+}
+
+.knowledge-term-card:hover {
+  border-color: var(--term-accent, var(--accent-light));
+  box-shadow: 0 8px 24px rgba(42, 120, 140, 0.12);
+  transform: translateY(-2px);
+}
+
+.knowledge-term-card.is-current {
+  border-color: var(--term-accent, var(--accent));
+  box-shadow: 0 6px 20px rgba(42, 144, 144, 0.15);
+}
+
+.knowledge-term-season {
+  display: inline-block;
+  font-family: var(--font-sub);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: var(--term-accent, var(--accent));
+  margin-bottom: 0.35rem;
+}
+
+.knowledge-term-name {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.15rem;
+}
+
+.knowledge-term-date {
+  display: block;
+  font-family: var(--font-sub);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.knowledge-term-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.knowledge-term-card--spring { --term-accent: var(--spring); }
+.knowledge-term-card--summer { --term-accent: var(--summer); }
+.knowledge-term-card--autumn { --term-accent: var(--autumn); }
+.knowledge-term-card--winter { --term-accent: var(--winter); }
+
+.knowledge-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.knowledge-section-head .season-pills .filter-btn {
+  font-family: var(--font-sub);
+  font-size: 0.72rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 0;
+  border: 1px solid rgba(42, 144, 144, 0.12);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--text-muted);
+}
+
+.knowledge-section-head .season-pills .filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.knowledge-modal-figure {
+  margin: 0 0 1rem;
+}
+
+.knowledge-modal-figure img {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border: 1px solid rgba(42, 144, 144, 0.12);
+  background: rgba(238, 250, 250, 0.6);
+}
+
+/* 地理分布 · MapOfChina1 图片地图 */
+.china-map-stage {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  border: 1px solid rgba(42, 144, 144, 0.15);
+  box-shadow: var(--shadow-soft);
+  background: #eefafa;
+  overflow: hidden;
+}
+
+.china-map-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.china-map-hotspots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.map-hotspot {
+  position: absolute;
+  pointer-events: auto;
+  border: 2px solid transparent;
+  background: rgba(42, 144, 144, 0);
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  padding: 0;
+}
+
+.map-hotspot:hover,
+.map-hotspot.active {
+  background: rgba(42, 144, 144, 0.18);
+  border-color: rgba(42, 144, 144, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.map-region-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.map-region-chip {
+  font-family: var(--font-sub);
+  font-size: 0.78rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgba(42, 144, 144, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.map-region-chip:hover,
+.map-region-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .map-hotspot {
+    border-width: 1px;
+  }
+
+  .map-region-chips {
+    gap: 0.35rem;
+  }
+
+  .map-region-chip {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.65rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .knowledge-spotlight {
+    grid-template-columns: 1fr;
+  }
+
+  .knowledge-spotlight-figure {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .knowledge-spotlight-figure img {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .knowledge-spotlight {
+    padding: 1.15rem;
+  }
+
+  .knowledge-spotlight-poetry {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .knowledge-term-card-thumb {
+    height: 4.75rem;
+  }
+
+  .knowledge-term-card.is-current .knowledge-term-card-thumb {
+    height: 5.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .knowledge-term-card:hover {
+    transform: none;
+  }
+
+  .knowledge-term-card:hover .knowledge-term-card-thumb img {
+    transform: none;
+  }
+}

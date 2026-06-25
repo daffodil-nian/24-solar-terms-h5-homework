@@ -1,0 +1,78 @@
+/* Aurora 背景 · 与 main.css 青绿体系一致 */
+
+.aurora-hero {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.aurora-blob-1 {
+  width: 55%;
+  height: 45%;
+  top: -8%;
+  left: -5%;
+  background: radial-gradient(circle, var(--ocean-sky, #89d4e0) 0%, transparent 70%);
+  animation: auroraDrift1 14s ease-in-out infinite alternate;
+}
+
+.aurora-blob-2 {
+  width: 50%;
+  height: 40%;
+  top: 5%;
+  right: -8%;
+  background: radial-gradient(circle, var(--accent-light, #5ec4d4) 0%, transparent 68%);
+  animation: auroraDrift2 18s ease-in-out infinite alternate;
+}
+
+.aurora-blob-3 {
+  width: 60%;
+  height: 35%;
+  top: 18%;
+  left: 25%;
+  background: radial-gradient(circle, #fff 0%, var(--ocean-mist, #b8ece8) 40%, transparent 72%);
+  animation: auroraDrift3 16s ease-in-out infinite alternate;
+}
+
+.aurora-fade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(238, 250, 250, 0.15) 0%,
+    rgba(238, 250, 250, 0.35) 45%,
+    rgba(223, 245, 245, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+@keyframes auroraDrift1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(6%, 8%) scale(1.08); }
+}
+
+@keyframes auroraDrift2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-8%, 5%) scale(1.12); }
+}
+
+@keyframes auroraDrift3 {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.45; }
+  100% { transform: translate(4%, -6%) scale(1.05); opacity: 0.65; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-blob {
+    animation: none;
+  }
+}

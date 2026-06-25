@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240">
+  <rect width="320" height="240" fill="#eef6ee"/>
+  <ellipse cx="160" cy="200" rx="120" ry="18" fill="#d8ead8" opacity="0.6"/>
+  <!-- rosette leaves -->
+  <g fill="#6a9e58" opacity="0.85">
+    <ellipse cx="160" cy="150" rx="42" ry="14" transform="rotate(-20 160 150)"/>
+    <ellipse cx="160" cy="150" rx="42" ry="14" transform="rotate(20 160 150)"/>
+    <ellipse cx="160" cy="150" rx="42" ry="14" transform="rotate(70 160 150)"/>
+    <ellipse cx="160" cy="150" rx="42" ry="14" transform="rotate(-70 160 150)"/>
+    <ellipse cx="160" cy="150" rx="38" ry="12" transform="rotate(0 160 150)"/>
+  </g>
+  <!-- stems with tiny white flowers -->
+  <line x1="160" y1="150" x2="160" y2="118" stroke="#5a9050" stroke-width="2"/>
+  <circle cx="160" cy="112" r="3" fill="#f8f4ec" stroke="#c8d8b8" stroke-width="0.8"/>
+  <circle cx="152" cy="118" r="2.5" fill="#fffef8" stroke="#c8d8b8" stroke-width="0.6"/>
+  <circle cx="168" cy="118" r="2.5" fill="#fffef8" stroke="#c8d8b8" stroke-width="0.6"/>
+  <text x="160" y="228" text-anchor="middle" font-family="KaiTi,serif" font-size="13" fill="#4a6848">雨水 · 荠菜</text>
+</svg>

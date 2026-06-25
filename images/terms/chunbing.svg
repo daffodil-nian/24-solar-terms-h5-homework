@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f5f0e8"/>
+  <ellipse cx="200" cy="160" rx="140" ry="50" fill="#e8dcc8"/>
+  <ellipse cx="200" cy="155" rx="120" ry="40" fill="#f8f0e0" stroke="#d4c0a0" stroke-width="2"/>
+  <circle cx="160" cy="150" r="8" fill="#8b6914" opacity="0.3"/>
+  <circle cx="200" cy="145" r="8" fill="#8b6914" opacity="0.3"/>
+  <circle cx="240" cy="150" r="8" fill="#8b6914" opacity="0.3"/>
+  <text x="200" cy="260" text-anchor="middle" font-family="KaiTi,serif" font-size="18" fill="#6b4a18" y="260">春饼 · 咬春纳福</text>
+</svg>

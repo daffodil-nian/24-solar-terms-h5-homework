@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="二十四节气 · 节气知识挑战 · 闯关答题">
+		<title>二十四节气 · 节气知识挑战</title>
+		<link href="../lib/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+		<link href="../css/modern.css" rel="stylesheet">
+		<link href="../css/challenge.css" rel="stylesheet">
+		<link href="../css/site-bgm.css" rel="stylesheet">
+		<link href="../css/responsive.css" rel="stylesheet">
+	</head>
+	<body class="challenge-page page-enter">
+		<div id="scrollProgress" class="scroll-progress-bar"></div>
+		<nav class="navbar navbar-expand-lg navbar-light film-nav fixed-top">
+			<div class="container"> <a class="navbar-brand page-link-transition" href="index.html">二十四节气</a> <button
+					class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+					aria-label="切换导航"> <span class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link page-link-transition" href="index.html">首页</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="knowledge.html">节气知识</a>
+						</li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="customs.html">民俗美食</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="poetry.html">诗词书画</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="health.html">时令养生</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="calendar.html">节气日历</a></li>
+						<li class="nav-item"><a class="nav-link active page-link-transition"
+								href="challenge.html">知识挑战</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition"
+								href="culture-library.html">文化联动库</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="games.html">游戏</a></li>
+						<li class="nav-item"><a class="nav-link page-link-transition" href="heritage.html">四时之约</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header class="challenge-hero">
+			<div class="container challenge-hero-inner">
+				<div class="challenge-host">
+					<div class="challenge-host-figure" id="hostCharacter" data-mood="happy" aria-hidden="true"> <svg
+							viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg">
+							<ellipse cx="70" cy="148" rx="38" ry="8" fill="rgba(42,120,140,0.12)" />
+							<rect x="48" y="108" width="44" height="36" rx="8" fill="#5ec4d4" />
+							<rect x="52" y="112" width="36" height="28" rx="4" fill="#eefafa" /> <text x="70" y="130"
+								text-anchor="middle" font-size="14" fill="#2a9090" font-family="serif">历</text>
+							<g class="host-face">
+								<circle cx="70" cy="62" r="36" fill="#ffe8d6" />
+								<ellipse cx="70" cy="68" rx="28" ry="26" fill="#ffd4b8" />
+								<path d="M34 55 Q70 28 106 55" fill="#3a2820" />
+								<circle cx="58" cy="64" r="4" fill="#2a2820" />
+								<circle cx="82" cy="64" r="4" fill="#2a2820" />
+								<circle cx="59" cy="63" r="1.2" fill="#fff" />
+								<circle cx="83" cy="63" r="1.2" fill="#fff" />
+								<path class="host-brow-left" d="M52 56 Q58 52 64 56" stroke="#3a2820" stroke-width="2"
+									fill="none" stroke-linecap="round" />
+								<path class="host-brow-right" d="M76 56 Q82 52 88 56" stroke="#3a2820" stroke-width="2"
+									fill="none" stroke-linecap="round" />
+								<path d="M62 78 Q70 86 78 78" stroke="#c45a5a" stroke-width="2.5" fill="none"
+									stroke-linecap="round" />
+								<circle cx="52" cy="72" r="5" fill="rgba(255,150,150,0.35)" />
+								<circle cx="88" cy="72" r="5" fill="rgba(255,150,150,0.35)" />
+							</g>
+							<ellipse cx="38" cy="100" rx="10" ry="14" fill="#ffd4b8" transform="rotate(-20 38 100)" />
+							<ellipse cx="102" cy="100" rx="10" ry="14" fill="#ffd4b8" transform="rotate(20 102 100)" />
+						</svg> </div>
+					<div class="challenge-host-bubble-wrap" id="hostBubbleWrap"> <button type="button"
+							class="challenge-host-bubble-toggle" id="hostBubbleToggle" aria-expanded="true"
+							aria-controls="hostBubblePanel" title="收起或展开小历的对话"> <span
+								class="challenge-host-toggle-open">收起对话</span> <span
+								class="challenge-host-toggle-closed">展开对话</span> </button>
+						<div class="challenge-host-bubble" id="hostBubblePanel" role="status" aria-live="polite">
+							<p class="challenge-host-bubble-text" id="hostBubbleText">你好呀！我是主持人小历，选一门题型，咱们开始闯关吧～</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<p class="challenge-hero-tag">Knowledge Challenge</p>
+					<h1 class="challenge-hero-title">节气知识挑战</h1>
+					<p class="challenge-hero-desc">从地理气候、民俗美食、诗词书画、时令养生、节气日历五个维度出题。先选题型，再闯关答题；也可打开题册，查阅正确答案。</p>
+				</div>
+			</div>
+		</header>
+		<main class="challenge-main">
+			<div class="container">
+				<div class="challenge-panel">
+					<div class="challenge-mode-tabs" role="tablist"> <button type="button"
+							class="challenge-mode-tab is-active" data-mode="quiz" role="tab">闯关挑战</button> <button
+							type="button" class="challenge-mode-tab" data-mode="book" role="tab">题册查阅</button> </div>
+					<p class="challenge-section-label">选择题型</p>
+					<div class="challenge-cat-grid" id="challengeCatGrid"></div> <button type="button"
+						class="challenge-start-btn" id="challengeStartBtn">开始挑战</button>
+					<div id="challengeBookPanel" hidden>
+						<p class="challenge-section-label mt-3">题册 · 题目与正确答案</p>
+						<div class="challenge-book-list" id="challengeBookList"></div>
+					</div>
+					<div id="challengeQuizPanel" hidden>
+						<div id="challengeQuizActive">
+							<div class="challenge-quiz-head">
+								<div class="challenge-progress-wrap">
+									<div class="challenge-progress-fill" id="challengeProgressFill"></div>
+								</div> <span class="challenge-progress-text" id="challengeProgressText">第 1 / 10
+									题</span> <span class="challenge-score-live" id="challengeScoreLive">得分 0</span>
+							</div>
+							<h2 class="challenge-question-text" id="challengeQuestionText"></h2>
+							<div class="challenge-options" id="challengeOptions"></div>
+							<div class="challenge-explain" id="challengeExplain" hidden></div>
+							<div class="d-flex gap-2 flex-wrap"> <button type="button" class="challenge-next-btn d-none"
+									id="challengeNextBtn">下一题</button> <button type="button" class="challenge-back-btn"
+									id="challengeBackSetup">返回选题</button> </div>
+						</div>
+						<div class="challenge-result" id="challengeResult" hidden>
+							<div class="challenge-result-score"><span id="challengeFinalScore">0</span><small> / <span
+										id="challengeFinalMax">100</span></small></div>
+							<p class="challenge-result-grade" id="challengeFinalGrade">继续加油</p>
+							<p class="challenge-result-pct">正确率 <span id="challengeFinalPct">0%</span></p> <button
+								type="button" class="challenge-start-btn" id="challengeRetryBtn"
+								onclick="$('#challengeStartBtn').trigger('click')">再来一局</button> <button type="button"
+								class="challenge-back-btn ms-2" id="challengeBackSetup2"
+								onclick="$('#challengeBackSetup').trigger('click')">返回选题</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="film-footer">
+			<div class="container">
+				<div class="footer-links mb-3"> <a href="index.html" class="page-link-transition">首页</a> <a
+						href="knowledge.html" class="page-link-transition">节气知识</a> <a href="calendar.html"
+						class="page-link-transition">节气日历</a> </div>
+				<p class="mb-0">二十四节气 · 节气知识挑战</p>
+			</div>
+		</footer>
+		<script src="../lib/jquery.min.js"></script>
+		<script src="../lib/bootstrap.bundle.min.js"></script>
+		<script src="../js/challenge-questions.js"></script>
+		<script src="../js/challenge.js"></script>
+		<script src="../js/scroll.js"></script>
+		<script src="../js/site-common.js"></script> <audio id="siteBgm" preload="auto"></audio> <button type="button"
+			id="siteBgmToggle" class="site-bgm-btn" aria-label="背景音乐">♫</button>
+		<script src="../js/site-bgm-config.js"></script>
+		<script src="../js/site-bgm.js"></script>
+	</body>
+</html>

@@ -1,0 +1,505 @@
+/* ============================================
+   现代化布局 · 参考 Truus 编辑式排版
+   仅结构与版式，不改站点配色与动效逻辑
+   ============================================ */
+
+:root {
+  --modern-max: 1440px;
+  --modern-gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --modern-display: clamp(3rem, 8.5vw, 7.5rem);
+  --modern-heading: clamp(2rem, 4.5vw, 3.5rem);
+  --modern-radius: 0;
+}
+
+/* ---- 全站容器加宽 ---- */
+.film-nav > .container,
+.film-footer > .container,
+.home-section-ocean > .container,
+.section-dark > .container,
+.hero-section > .container,
+.hero-section > .container-fluid {
+  max-width: var(--modern-max);
+  padding-left: var(--modern-gutter);
+  padding-right: var(--modern-gutter);
+}
+
+/* ---- 导航：扁平编辑风 ---- */
+.film-nav {
+  padding: 1rem 0 !important;
+  border-bottom: 1px solid rgba(42, 144, 144, 0.12) !important;
+  box-shadow: none !important;
+}
+
+.film-nav .navbar-brand {
+  font-size: 1.15rem !important;
+  letter-spacing: 0.08em !important;
+}
+
+.film-nav .nav-link {
+  font-size: 0.82rem !important;
+  letter-spacing: 0.06em !important;
+  padding: 0.35rem 0.9rem !important;
+  text-transform: uppercase;
+}
+
+.film-nav .nav-link::after {
+  display: none;
+}
+
+.film-nav .nav-link:hover,
+.film-nav .nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---- 首页 Hero：左对齐大标题 ---- */
+.hero-modern {
+  align-items: flex-end;
+  justify-content: flex-start;
+  text-align: left;
+  padding-bottom: clamp(3rem, 8vh, 6rem);
+}
+
+.hero-modern .hero-content {
+  text-align: left;
+  max-width: min(920px, 100%);
+  margin: 0;
+  padding: 0 var(--modern-gutter) 2rem;
+  width: 100%;
+}
+
+.hero-modern .modern-eyebrow {
+  font-family: var(--font-sub);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.hero-modern .hero-title {
+  font-size: var(--modern-display);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  max-width: 12ch;
+}
+
+.hero-modern .hero-title em {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.hero-modern .hero-subtitle {
+  margin-bottom: 0.75rem;
+}
+
+.hero-modern .hero-desc {
+  max-width: 36rem;
+  margin: 0 0 2.5rem;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.85;
+}
+
+.hero-modern .modern-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2.5rem;
+}
+
+.hero-modern .modern-cta-link {
+  font-family: var(--font-sub);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ocean-deep-text);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.15rem;
+  transition: opacity 0.25s ease;
+}
+
+.hero-modern .modern-cta-link:hover {
+  opacity: 0.65;
+  color: var(--ocean-deep-text);
+}
+
+@keyframes scrollPulseModern {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(8px); }
+}
+
+.hero-modern .scroll-hint {
+  left: var(--modern-gutter);
+  transform: none;
+  text-align: left;
+  animation: scrollPulseModern 3s ease-in-out infinite;
+}
+
+/* ---- 区块标题：左右分栏（Truus 式） ---- */
+.modern-section-head {
+  display: grid;
+  grid-template-columns: minmax(120px, 220px) 1fr;
+  gap: 1.5rem 3rem;
+  align-items: end;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(42, 144, 144, 0.15);
+}
+
+.modern-section-head .section-label-center,
+.modern-section-head .modern-eyebrow {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.modern-section-head .section-title-center,
+.modern-section-head .modern-heading {
+  text-align: left;
+  margin-bottom: 0;
+  font-size: var(--modern-heading);
+  line-height: 1.05;
+}
+
+.modern-lead {
+  max-width: 42rem;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ---- 导航列表：大条目 + 序号 ---- */
+.modern-link-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.modern-link-row {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  gap: 1rem 1.5rem;
+  align-items: center;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(42, 144, 144, 0.12);
+  text-decoration: none;
+  color: inherit;
+  transition: padding-left 0.3s ease, background 0.3s ease;
+}
+
+.modern-link-row:first-child {
+  border-top: 1px solid rgba(42, 144, 144, 0.12);
+}
+
+.modern-link-row:hover {
+  padding-left: 0.75rem;
+  background: rgba(255, 255, 255, 0.35);
+  color: inherit;
+}
+
+.modern-link-num {
+  font-family: var(--font-sub);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.modern-link-body h3 {
+  font-family: var(--font-title);
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  margin: 0 0 0.25rem;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.modern-link-body p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.modern-link-arrow {
+  font-size: 1.5rem;
+  line-height: 1;
+  opacity: 0.35;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modern-link-row:hover .modern-link-arrow {
+  transform: translateX(6px);
+  opacity: 1;
+}
+
+/* ---- 精选轮播：编辑式全宽 ---- */
+.modern-featured-wrap {
+  border: 1px solid rgba(42, 144, 144, 0.15);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.modern-featured-wrap .carousel-inner {
+  min-height: clamp(280px, 42vw, 520px);
+}
+
+.modern-featured-wrap .carousel-caption {
+  left: 0;
+  right: auto;
+  bottom: auto;
+  top: 0;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  max-width: min(520px, 90%);
+  text-align: left;
+}
+
+.modern-featured-wrap .carousel-caption h3 {
+  font-family: var(--font-title);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 0.75rem;
+}
+
+.modern-featured-wrap .carousel-caption p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  opacity: 0.92;
+}
+
+/* ---- 数据条：大数字横排 ---- */
+.modern-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(42, 144, 144, 0.15);
+  border-bottom: 1px solid rgba(42, 144, 144, 0.15);
+}
+
+.modern-stat-item {
+  padding: clamp(2rem, 4vw, 3rem) 1.5rem;
+  border-right: 1px solid rgba(42, 144, 144, 0.12);
+  text-align: left;
+}
+
+.modern-stat-item:last-child {
+  border-right: none;
+}
+
+.modern-stat-item .stat-num {
+  font-family: var(--font-sub);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ocean-deep-text);
+  margin-bottom: 0.5rem;
+}
+
+.modern-stat-item .stat-label {
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ---- 节气区：工具栏简化 ---- */
+.modern-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(42, 144, 144, 0.12);
+  border-bottom: 1px solid rgba(42, 144, 144, 0.12);
+}
+
+.modern-toolbar .btn-group .btn {
+  border-radius: 0 !important;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.45rem 1rem;
+}
+
+.orbit-info-panel {
+  border-radius: 0;
+  border: 1px solid rgba(42, 144, 144, 0.15);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* ---- 订阅：左右分栏 ---- */
+.modern-subscribe-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
+  border-top: 1px solid rgba(42, 144, 144, 0.15);
+}
+
+.modern-subscribe-intro .modern-heading {
+  font-family: var(--font-title);
+  font-size: var(--modern-heading);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.home-subscribe-card {
+  border-radius: 0 !important;
+  border: 1px solid rgba(42, 144, 144, 0.15) !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: none !important;
+  padding: clamp(1.5rem, 3vw, 2.5rem) !important;
+}
+
+.home-subscribe-card .form-control,
+.home-subscribe-card .form-select {
+  border-radius: 0;
+  border-color: rgba(42, 144, 144, 0.2);
+}
+
+/* ---- 页脚：多栏网格 ---- */
+.film-footer {
+  text-align: left;
+  padding: clamp(3rem, 6vw, 5rem) 0 2rem !important;
+}
+
+.modern-footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(2, 1fr);
+  gap: 2rem 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(42, 144, 144, 0.12);
+}
+
+.modern-footer-brand {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--ocean-deep-text);
+}
+
+.modern-footer-tagline {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 22rem;
+}
+
+.modern-footer-col h4 {
+  font-family: var(--font-sub);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.modern-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modern-footer-links li {
+  margin-bottom: 0.55rem;
+}
+
+.modern-footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.modern-footer-links a:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+
+.film-footer .modern-footer-copy {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* ---- 内页短 Hero ---- */
+.hero-section-short.hero-modern-inner {
+  align-items: flex-end;
+  justify-content: flex-start;
+  min-height: 55vh;
+  padding-top: 6rem;
+}
+
+.hero-section-short.hero-modern-inner .hero-content {
+  text-align: left;
+  margin: 0;
+  padding: 0 var(--modern-gutter) 3rem;
+  max-width: var(--modern-max);
+  width: 100%;
+}
+
+.hero-section-short.hero-modern-inner .hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  max-width: none;
+}
+
+.hero-section-short.hero-modern-inner .hero-desc {
+  margin-left: 0;
+}
+
+/* ---- 内页区块 ---- */
+.section-dark .subtitle-block {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section-dark .section-label-center {
+  text-align: left;
+}
+
+.section-dark .section-title-center {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 991.98px) {
+  .modern-section-head {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .modern-subscribe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modern-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modern-stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .modern-stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(42, 144, 144, 0.12);
+  }
+
+  .modern-stat-item:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .modern-link-row {
+    grid-template-columns: 2.5rem 1fr;
+  }
+
+  .modern-link-arrow {
+    display: none;
+  }
+
+  .hero-modern .hero-title {
+    max-width: none;
+  }
+}

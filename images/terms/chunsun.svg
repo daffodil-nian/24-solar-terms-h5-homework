@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#e8f0e0"/>
+  <path d="M200 250 L200 100" stroke="#6a9858" stroke-width="4"/>
+  <path d="M200 180 Q170 160 160 140" stroke="#5a8848" stroke-width="2" fill="none"/>
+  <path d="M200 150 Q230 130 240 110" stroke="#5a8848" stroke-width="2" fill="none"/>
+  <path d="M195 95 L200 60 L205 95 Z" fill="#7ab878"/>
+  <path d="M190 100 Q185 110 195 115" fill="#8ac888"/>
+  <path d="M210 100 Q215 110 205 115" fill="#8ac888"/>
+  <text x="200" y="280" text-anchor="middle" font-family="KaiTi,serif" font-size="18" fill="#4a6840">春笋 · 惊蛰破土</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="mapBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1e"/>
+      <stop offset="100%" style="stop-color:#2a2a30"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#mapBg)"/>
+  <!-- 简化的中国地图轮廓 -->
+  <path class="map-region" data-region="north" fill="#5a6e62" stroke="#8fa89a" stroke-width="1"
+    d="M380,80 L420,70 L460,85 L480,110 L470,140 L450,160 L420,170 L390,165 L370,140 L360,110 Z"/>
+  <path class="map-region" data-region="northeast" fill="#6b5a48" stroke="#a8907a" stroke-width="1"
+    d="M480,60 L540,55 L580,80 L570,120 L540,140 L500,130 L480,100 Z"/>
+  <path class="map-region" data-region="east" fill="#5a6b50" stroke="#9aab8e" stroke-width="1"
+    d="M470,160 L520,150 L560,170 L550,210 L520,230 L480,220 L460,190 Z"/>
+  <path class="map-region" data-region="central" fill="#6b5a48" stroke="#c9b5a0" stroke-width="1"
+    d="M360,170 L420,165 L450,190 L440,230 L400,250 L360,240 L340,200 Z"/>
+  <path class="map-region" data-region="south" fill="#5a6e62" stroke="#b8c9bf" stroke-width="1"
+    d="M340,250 L400,245 L440,270 L430,310 L390,330 L350,320 L330,280 Z"/>
+  <path class="map-region" data-region="southwest" fill="#4a4e52" stroke="#c5c8cb" stroke-width="1"
+    d="M280,220 L340,210 L360,250 L350,300 L310,320 L270,290 L260,250 Z"/>
+  <path class="map-region" data-region="northwest" fill="#4a4e52" stroke="#9a9ea3" stroke-width="1"
+    d="M260,120 L320,110 L350,150 L340,200 L300,220 L260,200 L250,160 Z"/>
+  <text x="400" y="400" text-anchor="middle" fill="rgba(168,160,152,0.4)" font-size="14" font-family="sans-serif">点击区域查看节气分布</text>
+</svg>
